@@ -1,0 +1,42 @@
+.Header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+.logo-header{
+  
+}
+
+.ul-header{
+  
+}
+.ul-header ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+.ul-header ul li{
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.ul-header ul li:hover{
+  color: aqua;
+  &::before{
+    content: "";width: 70px;
+    height: 2px;
+    background: aqua;
+    position: absolute;
+  }
+}
+
+.sub-ul-nosotros li{
+   display: none;
+}
+
+
+.buscador-header{
+
+}
