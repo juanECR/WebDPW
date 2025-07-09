@@ -1,0 +1,311 @@
+/* src/components/Home/Home.css */
+
+/* --- VARIABLES GLOBALES Y ESTILOS BASE --- */
+:root {
+  --primary-color: #007BFF; /* Un azul moderno y profesional */
+  --primary-hover: #0056b3;
+  --dark-color: #212529;
+  --text-color: #495057;
+  --light-gray-color: #f8f9fa;
+  --border-color: #dee2e6;
+  --white-color: #ffffff;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  --border-radius: 12px;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.home-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: var(--white-color);
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- ESTILOS DE SECCIONES Y TÍTULOS --- */
+.home-section {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.home-section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.section-title.left-aligned {
+  text-align: left;
+}
+.section-title.left-aligned::after {
+  margin: 10px 0 0;
+}
+
+
+/* --- 1. HERO SECTION (CARRUSEL) --- */
+.hero-section {
+  background: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200') no-repeat center center/cover;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content .hero-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 30px;
+}
+
+.carousel-dots .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dots .dot.active,
+.carousel-dots .dot:hover {
+  background-color: var(--white-color);
+}
+
+/* --- 2. TARJETAS DE INFORMACIÓN (ACADÉMICO Y NOTICIAS) --- */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: var(--light-gray-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 40px 20px;
+  text-align: center;
+  flex-basis: 280px; /* Ancho base */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow);
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.info-card h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+
+/* --- 3. SECCIÓN PRESENTACIÓN PROGRAMA --- */
+.program-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.program-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.decorative-bar {
+  width: 20px;
+  height: 200px;
+  background: var(--dark-color);
+  border-radius: 5px;
+}
+
+.program-icon-container {
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-size: 5rem;
+  width: 200px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.program-description {
+  flex: 1.5;
+}
+
+.program-description p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+}
+
+/* --- 4. TARJETAS DE NOTICIAS --- */
+.news-card {
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 350px; /* Ancho base */
+  transition: transform 0.3s ease;
+}
+.news-card:hover {
+  transform: translateY(-10px);
+}
+.news-image-placeholder {
+  background: var(--primary-color);
+  color: var(--white-color);
+  height: 180px;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+}
+.news-content {
+  padding: 25px;
+}
+.news-content h4 {
+  font-size: 1.3rem;
+  color: var(--dark-color);
+  margin: 0 0 10px 0;
+}
+.news-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- 5. FOOTER / LINKS INSTITUCIONALES --- */
+.footer-section {
+  background-color: var(--light-gray-color);
+}
+.link-icon-wrapper {
+  background: var(--white-color);
+  border: 1px solid var(--border-color);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+.link-icon-wrapper:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+  transform: scale(1.1);
+  box-shadow: var(--shadow);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+  .program-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .section-title.left-aligned {
+    text-align: center;
+  }
+  .section-title.left-aligned::after {
+    margin: 10px auto 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .program-visual {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .info-card, .news-card {
+    flex-basis: 100%; /* Las tarjetas ocupan todo el ancho */
+  }
+}

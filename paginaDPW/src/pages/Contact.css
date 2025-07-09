@@ -1,0 +1,211 @@
+/* src/components/Contacto/Contacto.css */
+
+/* --- ASUME QUE LAS VARIABLES :root ESTÁN EN UN CSS GLOBAL --- */
+/* Si no, copia aquí el bloque :root del archivo Home.css */
+
+.contact-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-gray-color);
+  padding-bottom: 60px;
+}
+
+.contact-header {
+  background: var(--dark-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 15px auto 0;
+  opacity: 0.9;
+}
+
+.contact-content-wrapper {
+  max-width: 1200px;
+  margin: -50px auto 0 auto; /* Solapa con el header */
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  background: var(--white-color);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container h3,
+.contact-info-container h3 {
+  font-size: 1.8rem;
+  color: var(--dark-color);
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.contact-form-container h3::after,
+.contact-info-container h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+/* --- ESTILOS DEL FORMULARIO --- */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* --- ESTILOS DE LA INFO DE CONTACTO --- */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.info-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-right: 20px;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+/* --- MAPA Y REDES SOCIALES --- */
+.map-placeholder {
+  height: 220px;
+  background-color: #f0f2f5;
+  border-radius: var(--border-radius);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #adb5bd;
+  margin-bottom: 30px;
+}
+.map-icon-bg {
+  font-size: 4rem;
+}
+.map-placeholder p {
+    margin-top: -30px;
+    font-weight: 500;
+}
+
+.social-links h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--dark-color);
+}
+.social-icons-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons-wrapper a {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+  background: var(--light-gray-color);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.social-icons-wrapper a:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-header h1 {
+    font-size: 2.2rem;
+  }
+  .contact-header p {
+    font-size: 1rem;
+  }
+  .contact-content-wrapper {
+    margin-top: -30px;
+    padding: 0 15px;
+  }
+  .contact-container {
+    padding: 25px;
+  }
+}

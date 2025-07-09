@@ -1,0 +1,242 @@
+/* src/components/Presentacion/Presentacion.css */
+/* ASUME QUE LAS VARIABLES :root ESTÁN EN UN CSS GLOBAL (index.css o App.css) */
+
+.presentacion-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- 1. BREADCRUMB HEADER --- */
+.breadcrumb-header {
+  background-color: var(--light-gray-color);
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 0.95rem;
+}
+.breadcrumb-list li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.breadcrumb-list li a:hover {
+  color: var(--primary-hover);
+}
+.breadcrumb-list li[aria-current="page"] {
+  color: var(--text-color);
+  font-weight: 500;
+}
+.separator-icon {
+  font-size: 0.8rem;
+  color: #aab2bd;
+  margin: 0 10px;
+}
+
+/* --- 2. SECCIÓN DE INTRODUCCIÓN A LA CARRERA --- */
+.presentacion-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.carrera-intro-section {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 0;
+}
+
+.carrera-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-duo {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+.icon-bg {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  display: grid;
+  place-items: center;
+  font-size: 5rem;
+  border-radius: 25px;
+  color: var(--white-color);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.icon-bg.design {
+  background: linear-gradient(135deg, #6f86d6, #48c6ef);
+  top: 0;
+  left: 0;
+  transform: rotate(-15deg);
+  z-index: 1;
+}
+.icon-bg.code {
+  background: linear-gradient(135deg, #007BFF, #0056b3);
+  bottom: 0;
+  right: 0;
+  transform: rotate(10deg);
+}
+
+.carrera-titulo {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--dark-color);
+  line-height: 1.1;
+  margin: 0;
+}
+.carrera-subtitulo {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  margin: 10px 0 25px 0;
+}
+.carrera-descripcion {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+.cta-button-presentacion {
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+.cta-button-presentacion:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+/* --- 3. SECCIÓN DE MÓDULOS --- */
+.modulos-section {
+  background-color: var(--light-gray-color);
+  padding: 80px 20px;
+  margin-left: -20px; /* Extiende el fondo a los bordes del contenedor */
+  margin-right: -20px; /* Extiende el fondo a los bordes del contenedor */
+}
+.modulos-titulo-principal {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--dark-color);
+  margin-bottom: 50px;
+  position: relative;
+}
+.modulos-titulo-principal::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+.modulos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.modulo-card {
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  border-top: 5px solid var(--primary-color);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.modulo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.modulo-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.modulo-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+.modulo-titulo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin: 0;
+}
+.modulo-descripcion {
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+.modulo-temas {
+  list-style: none;
+  padding: 0;
+}
+.modulo-temas li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+.check-icon {
+  color: #28a745; /* Un verde para el check */
+  font-size: 1.2rem;
+}
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+  .carrera-intro-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .carrera-visual {
+    margin-bottom: 40px;
+  }
+  .carrera-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .carrera-titulo {
+    font-size: 2.5rem;
+  }
+  .carrera-subtitulo {
+    font-size: 1.1rem;
+  }
+  .icon-duo {
+    transform: scale(0.8);
+  }
+  .modulos-section {
+    padding: 60px 10px;
+    margin: 0 -10px;
+  }
+}
