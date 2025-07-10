@@ -1,0 +1,151 @@
+/* src/components/PlanaDocente/PlanaDocente.css */
+/* ASUME QUE LAS VARIABLES :root ESTÁN EN UN CSS GLOBAL (index.css o App.css) */
+
+.plana-docente-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-gray-color);
+}
+
+/* --- ESTILOS REUTILIZADOS (Breadcrumbs) --- */
+.breadcrumb-header {
+  background-color: var(--white-color);
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+  font-size: 0.95rem;
+}
+.breadcrumb-list li a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.breadcrumb-list li a:hover { color: var(--primary-hover); }
+.breadcrumb-list li[aria-current="page"] { color: var(--text-color); font-weight: 500; }
+.separator-icon { width: 16px; height: 16px; color: #aab2bd; margin: 0 10px; }
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content-pd {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.descripcion-section-pd {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.page-title-pd {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+}
+.page-title-pd::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+.description-pd {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* --- SECCIÓN DE CARDS DE DOCENTES --- */
+.docentes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+}
+
+.docente-card {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+.docente-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.docente-photo img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.docente-info {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.docente-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin: 0 0 10px 0;
+}
+.docente-subject {
+  font-size: 1rem;
+  color: var(--primary-hover);
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+.subject-icon {
+  flex-shrink: 0;
+}
+.docente-email {
+  margin-top: auto; /* Empuja el botón hacia abajo */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 15px;
+  background: var(--light-gray-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+.docente-email:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-color: var(--primary-color);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 576px) {
+  .main-content-pd {
+    padding: 60px 20px;
+  }
+  .page-title-pd {
+    font-size: 2.2rem;
+  }
+  .description-pd {
+    font-size: 1.1rem;
+  }
+}

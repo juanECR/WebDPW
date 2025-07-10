@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import Logo from '../assets/images/logodpw.png';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,7 +40,8 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="navbar-container">
-        <h1 className="navbar-logo">IESTP Huanta</h1>
+    
+       <Link to="/"> <img src={Logo} alt="logo" className='LogoNavbar' /></Link>
 
         <button className="menu-toggle" onClick={toggleMenu}>
           ☰
@@ -54,12 +56,12 @@ const Navbar = () => {
               <span onClick={handleSubmenuClick}>Sobre Nosotros ▾</span>
               <ul className="submenu">
                 <li><Link to="/Presentacion">Presentación</Link></li>
-                <li><Link to="/sobre/mision-vision">Misión, visión y valores</Link></li>
-                <li><Link to="/sobre/organizacion">Organización institucional</Link></li>
-                <li><Link to="/sobre/autoridades">Autoridades</Link></li>
-                <li><Link to="/sobre/docentes">Plana Docente</Link></li>
-                <li><Link to="/sobre/ubicacion">Ubicación</Link></li>
-                <li><Link to="/sobre/plan-estudios">Plan de estudios</Link></li>
+                <li><Link to="/misionVision">Misión, visión y valores</Link></li>
+                <li><Link to="/organizacionInstitucional">Organización institucional</Link></li>
+                <li><Link to="/Autoridades">Autoridades</Link></li>
+                <li><Link to="/PlanaDocente">Plana Docente</Link></li>
+                <li><Link to="/Ubicacion">Ubicación</Link></li>
+                <li><Link to="/PlanDeEstudios">Plan de estudios</Link></li>
                 <li><Link to="/sobre/perfil-egreso">Perfil de egreso</Link></li>
               </ul>
             </li>

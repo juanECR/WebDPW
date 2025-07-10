@@ -1,5 +1,4 @@
 body {
-  background-color: var(--black);
   color: var(--black);
   font-family: sans-serif;
 }
@@ -12,20 +11,4 @@ body {
   --gray: #565656;
   --gray-light: #818181;
   --white: #ffffff;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: var(--white);
-  color: var(--black);
-  line-height: 1.6;
-}
-
-h1, h2, h3 {
-  color: var(--gray-dark);
-}
-
-a {
-  text-decoration: none;
 }

@@ -1,0 +1,166 @@
+/* src/components/MisionVisionValores/MisionVisionValores.css */
+/* ¡ESTE ARCHIVO NO REQUIERE CAMBIOS! */
+/* ASUME QUE LAS VARIABLES :root ESTÁN EN UN CSS GLOBAL (index.css o App.css) */
+
+.mvv-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white-color);
+}
+
+/* --- 1. ESTILOS DE BREADCRUMB --- */
+.breadcrumb-header {
+  background-color: var(--light-gray-color);
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+  font-size: 0.95rem;
+}
+.breadcrumb-list li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.breadcrumb-list li a:hover {
+  color: var(--primary-hover);
+}
+.breadcrumb-list li[aria-current="page"] {
+  color: var(--text-color);
+  font-weight: 500;
+}
+/* Esta clase funciona tanto para Heroicons como para React Icons */
+.separator-icon {
+  width: 16px;
+  height: 16px;
+  color: #aab2bd;
+  margin: 0 10px;
+  /* react-icons ya centra verticalmente los iconos SVG, así que no es necesario flexbox */
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.mvv-main-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+.page-main-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--dark-color);
+  margin-bottom: 80px;
+  position: relative;
+}
+.page-main-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  margin: 15px auto 0;
+}
+
+/* --- 2. ESTILO DE LAS SECCIONES --- */
+.mvv-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+.mvv-section:last-child {
+  margin-bottom: 0;
+}
+.mvv-section.mvv-section-reverse .mvv-image-container {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.mvv-section.mvv-section-reverse .mvv-text-container {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.mvv-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+.mvv-text-container {
+  padding: 10px;
+}
+.mvv-icon-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  border-radius: 50%;
+  margin-bottom: 25px;
+  color: var(--white-color);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+/* Esta clase también funciona perfectamente para los nuevos iconos */
+.mvv-icon {
+  width: 36px;
+  height: 36px;
+}
+.mvv-text-container h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin: 0 0 15px 0;
+}
+.mvv-text-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+  .mvv-section,
+  .mvv-section.mvv-section-reverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .mvv-section.mvv-section-reverse .mvv-image-container,
+  .mvv-section.mvv-section-reverse .mvv-text-container {
+    grid-column: 1 / 2;
+  }
+  .mvv-section.mvv-section-reverse .mvv-image-container {
+    grid-row: 1 / 2;
+  }
+  .mvv-section.mvv-section-reverse .mvv-text-container {
+    grid-row: 2 / 3;
+  }
+  .mvv-text-container {
+    text-align: center;
+  }
+  .mvv-icon-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 576px) {
+  .mvv-main-content {
+    padding: 60px 20px;
+  }
+  .page-main-title {
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+  }
+  .mvv-text-container h2 {
+    font-size: 1.8rem;
+  }
+}

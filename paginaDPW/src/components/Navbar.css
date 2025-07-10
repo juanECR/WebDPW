@@ -15,6 +15,11 @@
   box-sizing: border-box;
 }
 
+.LogoNavbar{
+  width: 100px;
+  height: 50px;
+}
+
 /* ==============================================
    Estilos de la Barra de Navegación
    ============================================== */

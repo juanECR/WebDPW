@@ -29,7 +29,7 @@ const Home = () => {
       <header className="hero-section">
         <div className="hero-content">
           <FaCode className="hero-icon" />
-          <h1>Plataforma Educativa de Desarrollo Web</h1>
+          <h1>Diseño y programación Web</h1>
           <p>Innovación, práctica y futuro profesional.</p>
         </div>
         <div className="carousel-dots">

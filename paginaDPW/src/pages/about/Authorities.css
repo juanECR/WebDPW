@@ -1,0 +1,208 @@
+/* src/components/Autoridades/Autoridades.css */
+/* ASUME QUE LAS VARIABLES :root ESTÁN EN UN CSS GLOBAL (index.css o App.css) */
+
+.autoridades-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdff; /* Un blanco ligeramente más cálido */
+}
+
+/* --- ESTILOS REUTILIZADOS (Breadcrumbs) --- */
+.breadcrumb-header {
+  background-color: var(--white-color);
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+  font-size: 0.95rem;
+}
+.breadcrumb-list li a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.breadcrumb-list li a:hover { color: var(--primary-hover); }
+.breadcrumb-list li[aria-current="page"] { color: var(--text-color); font-weight: 500; }
+.separator-icon { width: 16px; height: 16px; color: #aab2bd; margin: 0 10px; }
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.autoridades-main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* --- SECCIÓN DEL DIRECTOR --- */
+.director-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 60px;
+  background-color: var(--white-color);
+  padding: 50px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+  border: 1px solid var(--border-color);
+}
+.director-photo img {
+  width: 100%;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+  box-shadow: 0 5px 20px rgba(0, 123, 255, 0.2);
+}
+.director-title-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.director-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin: 0;
+}
+.director-position {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin: 5px 0 20px 0;
+}
+.director-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+.director-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary-hover);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.director-email:hover {
+  color: var(--dark-color);
+}
+
+/* --- SECCIÓN DEL EQUIPO --- */
+.equipo-section {
+  margin-top: 80px;
+}
+.equipo-titulo {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--dark-color);
+  margin-bottom: 50px;
+  position: relative;
+}
+.equipo-titulo::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.miembro-card {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+.miembro-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.miembro-photo img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s ease;
+}
+.miembro-card:hover .miembro-photo img {
+  transform: scale(1.05);
+}
+.miembro-info {
+  padding: 25px 20px;
+}
+.miembro-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin: 0 0 5px 0;
+}
+.miembro-title {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin: 0 0 20px 0;
+}
+.miembro-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: var(--light-gray-color);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.miembro-email:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-color: var(--primary-color);
+}
+.miembro-email .email-icon {
+  font-size: 1.1rem;
+}
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+  .director-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  .director-photo img {
+    width: 200px; /* Tamaño fijo en móvil para que no sea tan grande */
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  .autoridades-main-content {
+    padding: 60px 20px;
+  }
+  .director-name {
+    font-size: 2rem;
+  }
+  .director-section {
+    padding: 30px;
+  }
+  .equipo-titulo {
+    font-size: 2rem;
+  }
+}

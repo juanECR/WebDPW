@@ -1,0 +1,107 @@
+.plan-de-estudios-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-gray-color);
+}
+/* --- ESTILOS REUTILIZADOS (Breadcrumbs) --- */
+.breadcrumb-header {
+  background-color: var(--white-color); padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.breadcrumb-list {
+  display: flex; align-items: center; list-style: none; margin: 0 auto;
+  padding: 0 20px; max-width: 1200px; font-size: 0.95rem;
+}
+.breadcrumb-list li a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.breadcrumb-list li a:hover { color: var(--primary-hover); }
+.breadcrumb-list li[aria-current="page"] { color: var(--text-color); font-weight: 500; }
+.separator-icon { width: 16px; height: 16px; color: #aab2bd; margin: 0 10px; }
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content-pes {
+  max-width: 1200px; margin: 0 auto; padding: 80px 20px;
+}
+.descripcion-section-pes {
+  text-align: center; margin-bottom: 60px;
+}
+.page-title-pes {
+  font-size: 2.8rem; font-weight: 800; color: var(--dark-color);
+  margin-bottom: 20px;
+}
+.page-title-pes::after {
+  content: ''; display: block; width: 80px; height: 4px;
+  background-color: var(--primary-color); margin: 15px auto 0;
+  border-radius: 2px;
+}
+.description-pes {
+  font-size: 1.2rem; line-height: 1.7; color: var(--text-color);
+  max-width: 800px; margin: 0 auto;
+}
+
+/* --- SECCIÓN DE SEMESTRES Y TABLAS --- */
+.semestre-container {
+  margin-bottom: 60px;
+}
+.semestre-title {
+  font-size: 1.8rem; font-weight: 700; color: var(--dark-color);
+  margin-bottom: 20px; padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-color);
+}
+.table-wrapper {
+  overflow-x: auto; /* ¡Clave para la responsividad de las tablas! */
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+.plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px; /* Ancho mínimo para forzar el scroll en lugar de comprimir */
+}
+.plan-table th, .plan-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+.plan-table th {
+  background-color: #f8f9fa;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.plan-table td {
+  color: var(--text-color);
+  font-size: 1rem;
+  vertical-align: middle;
+}
+.plan-table tbody tr:hover {
+  background-color: #e9f4ff; /* Un azul muy claro al pasar el mouse */
+}
+.plan-table td:nth-child(2), .plan-table th:nth-child(2),
+.plan-table td:nth-child(3), .plan-table th:nth-child(3) {
+  text-align: center;
+  width: 120px; /* Ancho fijo para columnas numéricas */
+}
+
+/* Estilo del pie de tabla */
+.plan-table tfoot {
+  background-color: #f8f9fa;
+  font-weight: 700;
+}
+.plan-table tfoot td {
+  color: var(--dark-color);
+}
+.plan-table tfoot td:first-child {
+  text-align: right;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 576px) {
+  .main-content-pes { padding: 60px 20px; }
+  .page-title-pes { font-size: 2.2rem; }
+  .description-pes { font-size: 1.1rem; }
+  .semestre-title { font-size: 1.5rem; }
+}

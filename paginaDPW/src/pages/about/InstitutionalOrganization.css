@@ -1,0 +1,195 @@
+/* src/components/Organizacion/Organizacion.css */
+/* ¡ESTE ARCHIVO NO REQUIERE CAMBIOS! */
+/* ASUME QUE LAS VARIABLES :root ESTÁN EN UN CSS GLOBAL (index.css o App.css) */
+
+.organizacion-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-gray-color);
+  min-height: 100vh;
+}
+
+/* --- ESTILOS REUTILIZADOS (Breadcrumbs, etc.) --- */
+.breadcrumb-header {
+  background-color: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+  font-size: 0.95rem;
+}
+.breadcrumb-list li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.breadcrumb-list li a:hover { color: var(--primary-hover); }
+.breadcrumb-list li[aria-current="page"] { color: var(--text-color); font-weight: 500; }
+.separator-icon {
+  width: 16px;
+  height: 16px;
+  color: #aab2bd;
+  margin: 0 10px;
+  /* La clase se aplica sin problemas a los iconos de react-icons */
+}
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.org-main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+.page-main-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+}
+.org-description {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- ORGANIGRAMA --- */
+.organigrama-section {
+  margin-top: 80px;
+}
+.section-subtitle {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--dark-color);
+  margin-bottom: 50px;
+  position: relative;
+}
+.section-subtitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.organigrama-container {
+  text-align: center;
+  overflow-x: auto; /* Permite scroll horizontal en pantallas pequeñas */
+  padding: 20px 0;
+}
+.organigrama-chart {
+  padding: 0;
+  margin: 0;
+  display: inline-block; /* Para que el centrado del contenedor funcione */
+  min-width: 100%;
+}
+
+.organigrama-chart ul {
+  padding-top: 20px;
+  position: relative;
+  transition: all 0.5s;
+}
+.organigrama-chart li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  transition: all 0.5s;
+}
+
+/* --- LÍNEAS DE CONEXIÓN DEL ORGANIGRAMA --- */
+.organigrama-chart li::before, .organigrama-chart li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 2px solid var(--border-color);
+  width: 50%;
+  height: 20px;
+}
+.organigrama-chart li::after {
+  right: auto;
+  left: 50%;
+  border-left: 2px solid var(--border-color);
+}
+.organigrama-chart li:only-child::after, .organigrama-chart li:only-child::before {
+  display: none;
+}
+.organigrama-chart li:first-child::before, .organigrama-chart li:last-child::after {
+  border: 0 none;
+}
+.organigrama-chart li:last-child::before {
+  border-right: 2px solid var(--border-color);
+  border-radius: 0 5px 0 0;
+}
+.organigrama-chart li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+.organigrama-chart ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid var(--border-color);
+  width: 0;
+  height: 20px;
+}
+.organigrama-chart > li::before, .organigrama-chart > li::after {
+  border: 0 none;
+}
+
+/* --- ESTILO DE CADA NODO DEL ORGANIGRAMA --- */
+.chart-node {
+  padding: 20px;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  display: inline-block;
+  min-width: 220px;
+  transition: all 0.3s;
+  border-top: 5px solid var(--primary-color);
+}
+.chart-node:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-color: var(--primary-color);
+}
+.chart-node-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--text-color);
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+.chart-node h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin: 0 0 5px 0;
+}
+.chart-node p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .page-main-title { font-size: 2.2rem; }
+  .org-description { font-size: 1.1rem; }
+  .section-subtitle { font-size: 1.8rem; }
+}
