@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout.jsx';
+import NotFound from './pages/NotFound.jsx';
 import Home from './pages/Home.jsx';
 import Contacto from './pages/Contact.jsx';
 import Presentacion from './pages/about/Presentation.jsx';
@@ -10,6 +11,14 @@ import Autoridades from './pages/about/Authorities.jsx';
 import PlanaDocente from './pages/about/Faculty.jsx';
 import Ubicacion from './pages/about/Location.jsx';
 import PlanDeEstudios from './pages/about/PlanDeEstudios.jsx';
+import PerfilEgreso from './pages/about/PerfilEgreso.jsx';
+import Admision from './pages/Admission/Admission.jsx';
+import Matricula from './pages/Admission/Matricula.jsx';
+import BecasCredito  from './pages/Admission/BecasCredito.jsx';
+import DocumentosGestion from './pages/Transparency/DocGestion.jsx';
+import Estadistica from './pages/Transparency/Estadistica.jsx';
+import ReclamosQuejas from './pages/Transparency/Reclamos.jsx';
+import CalendarioActividades from './pages/Transparency/CalendarioActivi.jsx';
 import './App.css';
 
 const App = () => (
@@ -17,6 +26,7 @@ const App = () => (
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
+        <Route path='*' element={<NotFound/>}/>
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/Presentacion" element={<Presentacion />} />
         <Route path="/misionVision" element={<MisionVisionValores />} />
@@ -25,6 +35,14 @@ const App = () => (
         <Route path="/PlanaDocente" element={<PlanaDocente />} />
         <Route path="/Ubicacion" element={<Ubicacion />} />
         <Route path="/PlanDeEstudios" element={<PlanDeEstudios />} />
+        <Route path="/PerfilEgreso" element={<PerfilEgreso />} />
+        <Route path="/admision/Admision" element={<Admision />} />
+        <Route path="/admision/Matricula" element={<Matricula />} />
+        <Route path="/admision/BecasCredito" element={<BecasCredito />} />
+        <Route path="/Transparencia/DocumentosGestion" element={<DocumentosGestion />} />
+        <Route path="/Transparencia/Estadistica" element={<Estadistica />} />
+        <Route path='/Transparencia/ReclamosQuejas' element={<ReclamosQuejas/>}/>
+        <Route path='/Transparencia/CalendarioActividades' element={<CalendarioActividades/>}/>
       </Route>
     </Routes>
   </Router>

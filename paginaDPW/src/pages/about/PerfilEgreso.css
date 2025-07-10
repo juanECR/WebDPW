@@ -1,0 +1,146 @@
+/* src/components/PerfilEgreso/PerfilEgreso.css */
+/* ASUME QUE LAS VARIABLES :root ESTÁN EN UN CSS GLOBAL (index.css o App.css) */
+
+.perfil-egreso-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white-color);
+  min-height: 100vh;
+}
+
+/* --- ESTILOS REUTILIZADOS (Breadcrumbs) --- */
+.breadcrumb-header {
+  background-color: var(--light-gray-color); padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.breadcrumb-list {
+  display: flex; align-items: center; list-style: none; margin: 0 auto;
+  padding: 0 20px; max-width: 1200px; font-size: 0.95rem;
+}
+.breadcrumb-list li a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.breadcrumb-list li a:hover { color: var(--primary-hover); }
+.breadcrumb-list li[aria-current="page"] { color: var(--text-color); font-weight: 500; }
+.separator-icon { width: 16px; height: 16px; color: #aab2bd; margin: 0 10px; }
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content-pe {
+  max-width: 900px; margin: 0 auto; padding: 80px 20px;
+}
+.descripcion-section-pe {
+  text-align: center; margin-bottom: 60px;
+}
+.page-title-pe {
+  font-size: 2.8rem; font-weight: 800; color: var(--dark-color);
+  margin-bottom: 20px;
+}
+.page-title-pe::after {
+  content: ''; display: block; width: 80px; height: 4px;
+  background-color: var(--primary-color); margin: 15px auto 0;
+  border-radius: 2px;
+}
+.description-pe {
+  font-size: 1.2rem; line-height: 1.7; color: var(--text-color);
+}
+
+/* --- SECCIÓN DE ACORDEÓN --- */
+.accordion-section {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.accordion-item {
+  border-bottom: 1px solid var(--border-color);
+}
+.accordion-item:last-child {
+  border-bottom: none;
+}
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 25px;
+  cursor: pointer;
+  background-color: var(--white-color);
+  transition: background-color 0.3s ease;
+}
+.accordion-header:hover {
+  background-color: #f8f9fa;
+}
+.header-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  background-color: var(--light-gray-color);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+.accordion-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin: 0;
+}
+.accordion-toggle-icon {
+  margin-left: auto;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  transition: transform 0.4s ease;
+}
+
+/* Contenido del acordeón */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  background-color: #fdfdfd;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), opacity 0.3s ease-in-out;
+}
+.accordion-content-inner {
+  padding: 0px 25px 25px 95px; /* Alineado con el texto del header */
+}
+.accordion-content-inner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.accordion-content-inner li {
+  display: flex;
+  gap: 15px;
+  color: var(--text-color);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+.checkmark-icon {
+  color: var(--primary-color);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+/* Estilos para el estado activo */
+.accordion-item.active .accordion-header {
+  background-color: #f8f9fa;
+}
+.accordion-item.active .accordion-toggle-icon {
+  transform: rotate(180deg);
+  color: var(--primary-color);
+}
+.accordion-item.active .accordion-content {
+  max-height: 600px; /* Un valor grande para asegurar que todo el contenido quepa */
+  opacity: 1;
+  transition: max-height 1s cubic-bezier(1, 0, 1, 0), opacity 0.5s ease-in-out;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 576px) {
+  .main-content-pe { padding: 60px 20px; }
+  .page-title-pe { font-size: 2.2rem; }
+  .description-pe { font-size: 1.1rem; }
+  .accordion-header { padding: 15px; gap: 15px; }
+  .accordion-header h3 { font-size: 1.1rem; }
+  .accordion-content-inner { padding: 0 15px 15px 15px; } /* Simplificado en móvil */
+}

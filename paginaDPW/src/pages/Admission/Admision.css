@@ -1,0 +1,129 @@
+.admision-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white-color);
+}
+
+/* --- ESTILOS REUTILIZADOS (Breadcrumbs) --- */
+.breadcrumb-header {
+  background-color: var(--light-gray-color); padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.breadcrumb-list {
+  display: flex; align-items: center; list-style: none; margin: 0 auto;
+  padding: 0 20px; max-width: 1200px; font-size: 0.95rem;
+}
+.breadcrumb-list li a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.breadcrumb-list li a:hover { color: var(--primary-hover); }
+.breadcrumb-list li[aria-current="page"] { color: var(--text-color); font-weight: 500; }
+.separator-icon { width: 16px; height: 16px; color: #aab2bd; margin: 0 10px; }
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content-adm {
+  max-width: 1200px; margin: 0 auto; padding: 80px 20px;
+}
+.page-title-adm {
+  text-align: center; font-size: 2.8rem; font-weight: 800;
+  color: var(--dark-color); margin-bottom: 20px;
+}
+.description-adm {
+  text-align: center; font-size: 1.2rem; line-height: 1.7;
+  color: var(--text-color); max-width: 800px; margin: 0 auto 60px;
+}
+.admision-section {
+  margin-bottom: 40px;
+}
+.section-title-adm {
+  font-size: 1.6rem; font-weight: 700; color: var(--dark-color);
+  margin-bottom: 20px; padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+}
+.section-title-adm.centered {
+  text-align: center; border-bottom: none;
+}
+.section-title-adm.centered::after {
+  content: ''; display: block; width: 60px; height: 3px;
+  background: var(--primary-color); margin: 10px auto 0;
+}
+
+/* --- LAYOUT GRID --- */
+.admision-grid {
+  display: grid; grid-template-columns: 2fr 1fr;
+  gap: 40px; margin-bottom: 60px;
+}
+.main-column {}
+.sidebar-column {}
+
+/* --- TABLAS --- */
+.table-wrapper {
+  overflow-x: auto;
+}
+.admision-table {
+  width: 100%; border-collapse: collapse; min-width: 500px;
+}
+.admision-table th, .admision-table td {
+  padding: 12px 15px; text-align: left;
+  border: 1px solid var(--border-color);
+}
+.admision-table thead {
+  background-color: var(--dark-color); color: var(--white-color);
+}
+.admision-table tbody tr:nth-child(even) {
+  background-color: var(--light-gray-color);
+}
+.admision-table tbody tr:hover {
+  background-color: #e9f4ff;
+}
+
+/* --- MODALIDADES --- */
+.modalidades-container {
+  display: flex; flex-direction: column; gap: 20px;
+}
+.modality-card {
+  background: var(--light-gray-color); padding: 20px;
+  border-left: 5px solid var(--primary-color);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+.modality-icon {
+  font-size: 1.8rem; color: var(--primary-color); margin-bottom: 10px;
+  display: block;
+}
+.modality-title {
+  font-size: 1.2rem; margin: 0 0 10px 0; color: var(--dark-color);
+}
+.modality-description {
+  margin: 0; line-height: 1.6; color: var(--text-color);
+}
+
+/* --- PREGUNTAS FRECUENTES (FAQ) --- */
+.faq-section-container { max-width: 900px; margin-left: auto; margin-right: auto; }
+.faq-accordion { border: 1px solid var(--border-color); border-radius: var(--border-radius); overflow: hidden; }
+.faq-item { border-bottom: 1px solid var(--border-color); }
+.faq-item:last-child { border-bottom: none; }
+.faq-header {
+  display: flex; align-items: center; gap: 15px; padding: 18px;
+  cursor: pointer; background: var(--white-color);
+}
+.faq-header:hover { background: #f8f9fa; }
+.faq-icon { font-size: 1.2rem; color: var(--primary-color); }
+.faq-header h4 { font-size: 1.1rem; font-weight: 600; margin: 0; }
+.faq-toggle-icon { margin-left: auto; transition: transform 0.3s; }
+.faq-content {
+  max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out;
+  background: #fdfdfd;
+}
+.faq-content p {
+  padding: 0 18px 18px 51px; margin: 0; line-height: 1.7;
+}
+.faq-item.active .faq-toggle-icon { transform: rotate(180deg); }
+.faq-item.active .faq-content { max-height: 200px; transition: max-height 0.5s ease-in; }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+  .admision-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 576px) {
+  .main-content-adm { padding: 60px 20px; }
+  .page-title-adm { font-size: 2.2rem; }
+  .description-adm { font-size: 1.1rem; }
+}

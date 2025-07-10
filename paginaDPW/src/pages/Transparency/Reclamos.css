@@ -1,0 +1,122 @@
+/* src/components/ReclamosQuejas/ReclamosQuejas.css */
+/* ASUME QUE LAS VARIABLES :root ESTÁN EN UN CSS GLOBAL (index.css o App.css) */
+
+.reclamos-quejas-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-gray-color);
+}
+
+/* --- ESTILOS REUTILIZADOS (Breadcrumbs) --- */
+.breadcrumb-header {
+  background-color: var(--white-color); padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.breadcrumb-list {
+  display: flex; align-items: center; list-style: none; margin: 0 auto;
+  padding: 0 20px; max-width: 1200px; font-size: 0.95rem;
+}
+.breadcrumb-list li a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.breadcrumb-list li a:hover { color: var(--primary-hover); }
+.breadcrumb-list li[aria-current="page"] { color: var(--text-color); font-weight: 500; }
+.separator-icon { width: 16px; height: 16px; color: #aab2bd; margin: 0 10px; }
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content-rq {
+  max-width: 1200px; margin: 0 auto; padding: 80px 20px;
+}
+.descripcion-section-rq {
+  text-align: center; margin-bottom: 60px;
+}
+.page-title-rq {
+  font-size: 2.8rem; font-weight: 800; color: var(--dark-color);
+  margin-bottom: 20px;
+}
+.description-rq {
+  font-size: 1.2rem; line-height: 1.7; color: var(--text-color);
+  max-width: 800px; margin: 0 auto;
+}
+
+/* --- GRID Y CARDS --- */
+.rq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.rq-card {
+  background: var(--white-color); padding: 30px;
+  border-radius: var(--border-radius); box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  display: flex; flex-direction: column;
+}
+.rq-title {
+  display: flex; align-items: center; gap: 15px; font-size: 1.8rem;
+  margin: 0 0 15px 0; padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+.rq-definition {
+  font-size: 1.05rem; line-height: 1.7; font-style: italic;
+  color: var(--text-color); margin: 0 0 25px 0;
+}
+.steps-container {
+  flex-grow: 1; margin-bottom: 30px;
+}
+.steps-container h3 {
+  font-size: 1.2rem; color: var(--dark-color); margin-bottom: 20px;
+}
+.steps-list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.steps-list li {
+  display: flex; align-items: flex-start; gap: 15px;
+}
+.step-icon {
+  flex-shrink: 0; width: 45px; height: 45px; display: grid; place-items: center;
+  border-radius: 50%; background-color: var(--light-gray-color);
+  font-size: 1.3rem;
+}
+.step-text strong {
+  display: block; font-weight: 600; color: var(--dark-color); margin-bottom: 3px;
+}
+.step-text p {
+  margin: 0; font-size: 0.95rem; line-height: 1.5; color: var(--text-color);
+}
+
+/* Distinción visual */
+.reclamo-card { border-top: 5px solid #dc3545; /* Rojo de alerta */ }
+.reclamo-card .rq-title svg { color: #dc3545; }
+.reclamo-card .step-icon { color: #dc3545; }
+
+.queja-card { border-top: 5px solid #ffc107; /* Amarillo de advertencia */ }
+.queja-card .rq-title svg { color: #ffc107; }
+.queja-card .step-icon { color: #ffc107; }
+
+/* Botones */
+.rq-button {
+  display: block; padding: 15px; border-radius: 8px; text-decoration: none;
+  font-size: 1.1rem; font-weight: 600; text-align: center;
+  transition: all 0.3s; margin-top: auto;
+}
+.reclamo-button {
+  background-color: #dc3545; color: var(--white-color);
+}
+.reclamo-button:hover {
+  background-color: #c82333; box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
+}
+.queja-button {
+  background-color: #ffc107; color: var(--dark-color);
+}
+.queja-button:hover {
+  background-color: #e0a800; box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+  .rq-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 576px) {
+  .main-content-rq { padding: 60px 20px; }
+  .page-title-rq { font-size: 2.2rem; }
+  .description-rq { font-size: 1.1rem; }
+}

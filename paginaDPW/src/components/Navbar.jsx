@@ -62,26 +62,26 @@ const Navbar = () => {
                 <li><Link to="/PlanaDocente">Plana Docente</Link></li>
                 <li><Link to="/Ubicacion">Ubicación</Link></li>
                 <li><Link to="/PlanDeEstudios">Plan de estudios</Link></li>
-                <li><Link to="/sobre/perfil-egreso">Perfil de egreso</Link></li>
+                <li><Link to="/PerfilEgreso">Perfil de egreso</Link></li>
               </ul>
             </li>
 
             <li className="has-submenu">
               <span onClick={handleSubmenuClick}>Admisión y Matrícula ▾</span>
               <ul className="submenu">
-                <li><Link to="/admision/admision">Admisión</Link></li>
-                <li><Link to="/admision/matricula">Matrícula</Link></li>
-                <li><Link to="/admision/becas">Becas y crédito</Link></li>
+                <li><Link to="/admision/Admision">Admisión</Link></li>
+                <li><Link to="/admision/Matricula">Matrícula</Link></li>
+                <li><Link to="/admision/BecasCredito">Becas y crédito</Link></li>
               </ul>
             </li>
 
             <li className="has-submenu">
               <span onClick={handleSubmenuClick}>Transparencia ▾</span>
               <ul className="submenu">
-                <li><Link to="/transparencia/documentos">Documentos de gestión</Link></li>
-                <li><Link to="/transparencia/estadistica">Estadística</Link></li>
-                <li><Link to="/transparencia/reclamos">Reclamos y quejas</Link></li>
-                <li><Link to="/transparencia/calendario">Calendario de actividades</Link></li>
+                <li><Link to="/Transparencia/DocumentosGestion">Documentos de gestión</Link></li>
+                <li><Link to="/Transparencia/Estadistica">Estadística</Link></li>
+                <li><Link to="/Transparencia/ReclamosQuejas">Reclamos y quejas</Link></li>
+                <li><Link to="/Transparencia/CalendarioActividades">Calendario de actividades</Link></li>
               </ul>
             </li>
 

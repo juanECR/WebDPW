@@ -1,0 +1,142 @@
+.becas-credito-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdff;
+}
+
+/* --- ESTILOS REUTILIZADOS (Breadcrumbs) --- */
+.breadcrumb-header {
+  background-color: var(--white-color); padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.breadcrumb-list {
+  display: flex; align-items: center; list-style: none; margin: 0 auto;
+  padding: 0 20px; max-width: 1200px; font-size: 0.95rem;
+}
+.breadcrumb-list li a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.breadcrumb-list li a:hover { color: var(--primary-hover); }
+.breadcrumb-list li[aria-current="page"] { color: var(--text-color); font-weight: 500; }
+.separator-icon { width: 16px; height: 16px; color: #aab2bd; margin: 0 10px; }
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content-bc {
+  max-width: 1100px; margin: 0 auto; padding: 80px 20px;
+}
+.descripcion-section-bc {
+  text-align: center; margin-bottom: 60px;
+}
+.page-title-bc {
+  font-size: 2.8rem; font-weight: 800; color: var(--dark-color);
+  margin-bottom: 20px;
+}
+.description-bc {
+  font-size: 1.2rem; line-height: 1.7; color: var(--text-color);
+  max-width: 800px; margin: 0 auto;
+}
+.apoyo-section {
+  margin-bottom: 60px;
+}
+.section-title-bc {
+  font-size: 2rem; font-weight: 700; color: var(--dark-color);
+  margin-bottom: 30px; text-align: center;
+}
+.section-title-bc::after {
+  content: ''; display: block; width: 60px; height: 3px;
+  background: var(--primary-color); margin: 10px auto 0;
+}
+
+/* --- ESTILOS DE TARJETAS --- */
+.cards-grid, .cards-grid-credito {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+.beca-card, .credito-card {
+  background: var(--white-color); padding: 30px;
+  border-radius: var(--border-radius); box-shadow: var(--shadow);
+  display: flex; flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--border-color);
+}
+.beca-card:hover, .credito-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+.card-icon-bc {
+  font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;
+}
+.card-title-bc {
+  font-size: 1.4rem; margin: 0 0 15px 0; color: var(--dark-color);
+}
+.card-description-bc {
+  font-size: 1rem; line-height: 1.6; color: var(--text-color);
+  flex-grow: 1; margin-bottom: 20px;
+}
+
+/* Estilos específicos para Beca Card */
+.requirements-list {
+  list-style: "✓ ";
+  padding-left: 20px;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+.requirements-list li {
+  margin-bottom: 8px; color: var(--text-color);
+}
+.coverage-tag {
+  align-self: flex-start;
+  background-color: #e7f5ff;
+  color: #0056b3;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 50px;
+  margin-top: auto;
+}
+
+/* Estilos específicos para Crédito Card */
+.cards-grid-credito { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+.credito-card { background-color: #f8f9fa; text-align: center; }
+.features-text { font-style: italic; color: var(--text-color); margin: 0 0 20px 0; }
+.cta-button-bc {
+  background: var(--primary-color); color: var(--white-color);
+  padding: 12px 25px; text-decoration: none; border-radius: 8px;
+  font-weight: 600; transition: all 0.3s;
+  margin-top: auto;
+}
+.cta-button-bc:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* --- PREGUNTAS FRECUENTES (FAQ) --- */
+/* (Reutilizando el mismo estilo de la página de matrícula) */
+.faq-section-container-bc { max-width: 900px; margin-left: auto; margin-right: auto; }
+.faq-accordion { /* Reutiliza estilos de Matricula.css */ }
+.faq-item {
+  background: var(--white-color); margin-bottom: 10px;
+  border: 1px solid var(--border-color); border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.faq-header {
+  display: flex; align-items: center; gap: 15px; padding: 18px;
+  cursor: pointer; font-weight: 600;
+}
+.faq-header h4 { font-size: 1.1rem; margin: 0; }
+.faq-toggle-icon { margin-left: auto; transition: transform 0.3s; }
+.faq-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+.faq-content p {
+  padding: 0 18px 18px 18px; margin: 0;
+  line-height: 1.7; border-top: 1px solid var(--border-color);
+  padding-top: 18px;
+}
+.faq-item.active .faq-toggle-icon { transform: rotate(180deg); color: var(--primary-color); }
+.faq-item.active .faq-content { max-height: 200px; transition: max-height 0.5s ease-in; }
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 576px) {
+  .main-content-bc { padding: 60px 20px; }
+  .page-title-bc { font-size: 2.2rem; }
+  .description-bc { font-size: 1.1rem; }
+  .section-title-bc { font-size: 1.8rem; }
+}

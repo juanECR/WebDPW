@@ -1,0 +1,128 @@
+.documentos-gestion-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-gray-color);
+}
+
+/* --- ESTILOS REUTILIZADOS (Breadcrumbs) --- */
+.breadcrumb-header {
+  background-color: var(--white-color); padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.breadcrumb-list {
+  display: flex; align-items: center; list-style: none; margin: 0 auto;
+  padding: 0 20px; max-width: 1200px; font-size: 0.95rem;
+}
+.breadcrumb-list li a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.breadcrumb-list li a:hover { color: var(--primary-hover); }
+.breadcrumb-list li[aria-current="page"] { color: var(--text-color); font-weight: 500; }
+.separator-icon { width: 16px; height: 16px; color: #aab2bd; margin: 0 10px; }
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content-dg {
+  max-width: 1100px; margin: 0 auto; padding: 80px 20px;
+}
+.descripcion-section-dg {
+  text-align: center; margin-bottom: 60px;
+}
+.page-title-dg {
+  font-size: 2.8rem; font-weight: 800; color: var(--dark-color);
+  margin-bottom: 20px;
+}
+.description-dg {
+  font-size: 1.2rem; line-height: 1.7; color: var(--text-color);
+  max-width: 800px; margin: 0 auto;
+}
+.docs-section {
+  margin-bottom: 60px;
+}
+.section-title-dg {
+  font-size: 2rem; font-weight: 700; color: var(--dark-color);
+  margin-bottom: 30px; padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* --- CARDS DE DOCUMENTOS DE GESTIÓN --- */
+.doc-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.doc-card {
+  background: var(--white-color); padding: 30px; text-align: center;
+  border-radius: var(--border-radius); box-shadow: var(--shadow);
+  display: flex; flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.doc-card:hover {
+  transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+.doc-icon {
+  width: 70px; height: 70px; margin: 0 auto 25px auto;
+  display: grid; place-items: center; font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  color: var(--white-color); border-radius: 50%;
+}
+.doc-title {
+  font-size: 1.4rem; margin: 0 0 15px 0; color: var(--dark-color);
+}
+.doc-description {
+  font-size: 1rem; line-height: 1.6; color: var(--text-color);
+  flex-grow: 1; margin-bottom: 25px;
+}
+.doc-download-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 10px; background: var(--primary-color); color: var(--white-color);
+  padding: 12px 20px; border-radius: 8px; text-decoration: none;
+  font-weight: 600; transition: background-color 0.3s;
+  margin-top: auto;
+}
+.doc-download-btn:hover { background: var(--primary-hover); }
+
+/* --- LISTA DE PUBLICACIONES --- */
+.pub-list { display: flex; flex-direction: column; gap: 20px; }
+.pub-item {
+  display: flex; background: var(--white-color);
+  border-radius: var(--border-radius); box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden; transition: box-shadow 0.3s;
+}
+.pub-item:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.pub-date {
+  flex-shrink: 0; width: 100px; background: var(--dark-color);
+  color: var(--white-color); text-align: center;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 20px;
+}
+.pub-date .day { font-size: 2rem; font-weight: 700; }
+.pub-date .month-year { font-size: 0.9rem; text-transform: uppercase; }
+.pub-content { padding: 20px 25px; }
+.pub-title { font-size: 1.3rem; margin: 0 0 10px 0; }
+.pub-description { margin: 0 0 15px 0; color: var(--text-color); }
+.pub-link { color: var(--primary-color); text-decoration: none; font-weight: 600; }
+
+/* --- LISTA DE OTROS DOCUMENTOS --- */
+.simple-doc-list {
+  list-style: none; padding: 0; background: var(--white-color);
+  border-radius: var(--border-radius); box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.simple-doc-item { border-bottom: 1px solid var(--border-color); }
+.simple-doc-item:last-child { border-bottom: none; }
+.simple-doc-item a {
+  display: flex; align-items: center; gap: 15px; padding: 18px 25px;
+  text-decoration: none; color: var(--text-color); font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+.simple-doc-item a:hover {
+  background: var(--primary-color); color: var(--white-color);
+}
+.simple-doc-item a svg { color: var(--primary-color); transition: color 0.3s; }
+.simple-doc-item a:hover svg { color: var(--white-color); }
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 576px) {
+  .main-content-dg { padding: 60px 20px; }
+  .page-title-dg { font-size: 2.2rem; }
+  .description-dg { font-size: 1.1rem; }
+  .section-title-dg { font-size: 1.8rem; }
+}
