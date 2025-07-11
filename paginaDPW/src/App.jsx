@@ -19,6 +19,12 @@ import DocumentosGestion from './pages/Transparency/DocGestion.jsx';
 import Estadistica from './pages/Transparency/Estadistica.jsx';
 import ReclamosQuejas from './pages/Transparency/Reclamos.jsx';
 import CalendarioActividades from './pages/Transparency/CalendarioActivi.jsx';
+import Biblioteca from './pages/Services/Library.jsx';
+import ServiciosComplementarios from './pages/Services/ComplementaryServices.jsx';
+import BolsaLaboral from './pages/Services/JobBoard.jsx';
+import LinksInstitucionales from './pages/OtherPages/LinksInstitu.jsx';
+import Noticias from './pages/OtherPages/Noticias.jsx';
+import Galeria from './pages/OtherPages/Galeria.jsx';
 import './App.css';
 
 const App = () => (
@@ -43,6 +49,12 @@ const App = () => (
         <Route path="/Transparencia/Estadistica" element={<Estadistica />} />
         <Route path='/Transparencia/ReclamosQuejas' element={<ReclamosQuejas/>}/>
         <Route path='/Transparencia/CalendarioActividades' element={<CalendarioActividades/>}/>
+        <Route path='/Servicios/Biblioteca' element={<Biblioteca/>}/>
+        <Route path='/Servicios/Complementarios' element={<ServiciosComplementarios/>}/>
+        <Route path='/Servicios/BolsaLaboral' element={<BolsaLaboral/>}/>
+        <Route path='/Otras/Links' element={<LinksInstitucionales/>}/>
+        <Route path='/Otras/Noticias' element={<Noticias/>}/>
+        <Route path='/Otras/Galeria' element={<Galeria/>}/>
       </Route>
     </Routes>
   </Router>

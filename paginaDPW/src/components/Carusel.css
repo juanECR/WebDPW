@@ -1,0 +1,131 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Ajusta la altura a tu gusto */
+  min-height: 500px;
+  overflow: hidden;
+  color: var(--white-color);
+}
+
+.carousel-slider {
+  display: flex;
+  height: 100%;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel-content {
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.carousel-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.carousel-content h1 {
+  font-size: 3.5rem;
+  margin: 0.5rem 0;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.carousel-content p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* --- Controles de Navegación --- */
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  pointer-events: none; /* Permite clickear a través del contenedor */
+}
+
+.carousel-arrow {
+  pointer-events: all; /* Hace los botones clickeables */
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: var(--white-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* --- Puntos de Navegación --- */
+.carousel-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dots .dot:hover {
+  background-color: var(--white-color);
+}
+
+.carousel-dots .dot.active {
+  background-color: var(--white-color);
+  transform: scale(1.2);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .carousel-content h1 {
+    font-size: 2.5rem;
+  }
+  .carousel-controls {
+    padding: 0 15px;
+  }
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}

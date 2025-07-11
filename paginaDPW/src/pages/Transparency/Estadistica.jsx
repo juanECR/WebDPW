@@ -6,9 +6,9 @@ import { FaChevronRight, FaUsers, FaUserCheck, FaUserGraduate, FaArrowUp, FaArro
 
 // --- DATOS PARA EL COMPONENTE ---
 const postulantesData = [
-  { year: 2022, total: 1150, change: "+5%", breakdown: [{ label: 'Hombres', value: 620 }, { label: 'Mujeres', value: 530 }] },
-  { year: 2023, total: 1280, change: "+11%", breakdown: [{ label: 'Hombres', value: 700 }, { label: 'Mujeres', value: 580 }] },
-  { year: 2024, total: 1410, change: "+10%", breakdown: [{ label: 'Hombres', value: 780 }, { label: 'Mujeres', value: 630 }] }
+  { year: 2022, total: 1050, change: "+5%", breakdown: [{ label: 'Hombres', value: 500 }, { label: 'Mujeres', value: 550 }] },
+  { year: 2023, total: 680, change: "-11%", breakdown: [{ label: 'Hombres', value: 400 }, { label: 'Mujeres', value: 280 }] },
+  { year: 2024, total: 950, change: "+10%", breakdown: [{ label: 'Hombres', value: 350 }, { label: 'Mujeres', value: 600 }] }
 ];
 const ingresantesData = [
   { year: 2022, total: 450, change: "+2%", vacancyCoverage: "90%", breakdown: [{ label: 'Hombres', value: 250 }, { label: 'Mujeres', value: 200 }] },

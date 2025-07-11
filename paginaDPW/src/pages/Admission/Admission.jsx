@@ -6,18 +6,19 @@ import { FaChevronRight, FaChevronDown, FaFileAlt, FaCalendarAlt, FaGraduationCa
 
 // --- DATOS PARA EL COMPONENTE (Fácil de actualizar) ---
 const requisitosData = [
-  { concepto: "Inscripción al Examen de Admisión", costo: "S/ 350.00" },
-  { concepto: "Carpeta del Postulante", costo: "S/ 50.00" },
-  { concepto: "Certificado de Estudios Secundarios (Visado)", costo: "Varía según UGEL" },
-  { concepto: "Copia de DNI", costo: "Gratuito" }
+  { concepto: "Derecho de Inscripción para examen de Postulantes Ordinarios.", costo: "S/ 200.00" },
+  { concepto: "Postulantes de Ley del Servicio Militar (activo).", costo: "S/ 100.00" },
+  { concepto: "Exonerados por primer puesto de educación secundaria.", costo: "S/230.00" },
+  { concepto: "Exonerados por poseer Títulos y/ o grados de nivel Universitario y Superior.", costo: "S/280.00" },
+{ concepto: "Exonerados por deportista calificado que hayan representado a nivel regional.", costo: "S/230.00" }
 ];
 
 const cronogramaData = [
-  { actividad: "Inscripción Regular", fecha: "01 Febrero - 15 Marzo" },
-  { actividad: "Publicación de Postulantes Aptos", fecha: "18 Marzo" },
-  { actividad: "Examen de Admisión", fecha: "22 Marzo" },
-  { actividad: "Publicación de Resultados", fecha: "23 Marzo" },
-  { actividad: "Matrícula de Ingresantes", fecha: "25 Marzo - 05 Abril" }
+  { actividad: "Convocatoria Examen de Admisión 2025, en todos los Programas de Estudios", fecha: "Del 20 de Enero al  4 de Abril del 2025" },
+  { actividad: "Inscripción de postulantes Examen de Admisión Ordinario 2025", fecha: "Del 20 de Enero al 14 de Marzo del 2025" },
+  { actividad: "Inscripción de postulantes Exonerados por diferentes modalidades al Examen de Admisión 2025", fecha: "22 Marzo" },
+  { actividad: "Evaluación de expedientes exonerados por diferentes modalidades Examen de Admisión 2025", fecha: "20 de Marzo del 2025" },
+  { actividad: "Publicación resultados exonerados por diferentes modalidades Examen de Admisión 2025", fecha: "20 de Marzo del 2025" }
 ];
 
 const modalidadesData = [

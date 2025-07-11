@@ -8,27 +8,27 @@ import { FaChevronRight, FaUserCircle } from 'react-icons/fa';
 // Datos del organigrama (sin cambios, ya que es independiente de los iconos)
 const organigramaData = {
   title: "Dirección General",
-  name: "Dr. Alejandro Vargas",
+  name: "Ing. Esau VILLANTOY PALOMINO",
   children: [
     {
-      title: "Dirección Académica",
-      name: "M.Sc. Isabel Rivas",
+      title: "JEFE DE UNIDAD ACADÉMICA",
+      name: " Ing. David Abraham CRUZ CAPCHA",
       children: [
-        { title: "Coordinación de Diseño", name: "Lic. Carla Mendoza" },
-        { title: "Coordinación de Programación", name: "Ing. Roberto Diaz" },
+        { title: "JEFE DE INVESTIGACIÓN E INNOVACIÓN TECNOLÓGICA", name: "Lic. Constancia QUIQUIN CONGA" },
+        { title: "JEFE DE UNIDAD DE BIENESTAR Y EMPLEABILIDAD", name: "Lic.Alfonso Alvaro MORENO MARUQEZ" },
       ],
     },
     {
-      title: "Dirección Administrativa",
-      name: "C.P. Laura Nuñez",
+      title: "JEFE DE UNIDAD ADMINISTRATIVA",
+      name: "CPC  .  Maricela Silvia GUERRA LÓPEZz",
       children: [
-        { title: "Recursos Humanos", name: "Lic. Javier Solis" },
-        { title: "Servicios Escolares", name: "Sra. Elena Paredes" },
+        { title: "SECRETARIO ACADÉMICO", name: "Ing. Nancy Beatriz RODRIGUEZ LAOS" },
+        { title: "COORDINADOR DE ÁREA DE CALIDAD", name: "Gerson Uriel TAYPE MUCHA" },
       ],
     },
     {
-      title: "Vinculación y Extensión",
-      name: "Lic. Fernando Correa",
+      title: "COORDINADOR DEL PROGRAMA DE ESTUDIOS DE DPW",
+      name: "Juan Carlos TORRES lOZANO",
     },
   ],
 };

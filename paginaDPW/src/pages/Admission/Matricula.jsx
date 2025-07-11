@@ -17,27 +17,21 @@ const cronogramaData = [
 const requisitosData = [
   {
     icon: <FaIdCard />,
-    title: "Documentos de Identidad",
-    description: "Copia legible del Documento Nacional de Identidad (DNI) por ambos lados.",
+    title: "Ingresantes al primer (I) ciclo académico",
+    description: "Ficha de matrícula completada, establecida por el IEST Público “HUANTA”.",
     note: "Costo: Incluido en el proceso."
   },
   {
     icon: <FaCheckCircle />,
-    title: "Certificado de Estudios",
-    description: "Certificado original de Estudios Secundarios, visado por la UGEL correspondiente.",
+    title: "Ingresantes al primer (I) ciclo académico",
+    description: "Certificado de estudios que acredita haber concluido la Educación Básica (certificado por la UGEL), si dicho certificado no fue presentado durante el proceso de admisión",
     note: "Trámite personal."
   },
   {
     icon: <FaFileInvoiceDollar />,
-    title: "Comprobante de Pago",
-    description: "Voucher de pago por derecho de matrícula y primera cuota, realizado en las entidades bancarias autorizadas.",
-    note: "Costo: S/ 550.00 (Matrícula) + S/ 600.00 (1ra Cuota)"
-  },
-  {
-    icon: <FaCamera />,
-    title: "Fotografía Digital",
-    description: "Una (1) fotografía tamaño carnet en formato digital (JPG), fondo blanco, sin lentes ni accesorios.",
-    note: "Para carnet de estudiante."
+    title: "Para los estudiantes del segundo (II) al sexto (VI) ciclo académicoo",
+    description: "Es requisito de matrícula haber aprobado como mínimo el setenta y cinco por ciento (75 %) de los créditos del ciclo inmediato anterior.",
+    note: "Ninguno"
   }
 ];
 

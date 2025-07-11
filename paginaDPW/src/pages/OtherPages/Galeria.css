@@ -1,0 +1,92 @@
+.galeria-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white-color);
+}
+
+/* --- ESTILOS REUTILIZADOS (Breadcrumbs) --- */
+.breadcrumb-header { background-color: var(--light-gray-color); padding: 15px 0; border-bottom: 1px solid var(--border-color); }
+.breadcrumb-list { display: flex; align-items: center; list-style: none; margin: 0 auto; padding: 0 20px; max-width: 1200px; font-size: 0.95rem; }
+.breadcrumb-list li a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.breadcrumb-list li a:hover { color: var(--primary-hover); }
+.breadcrumb-list li[aria-current="page"] { color: var(--text-color); font-weight: 500; }
+.separator-icon { width: 16px; height: 16px; color: #aab2bd; margin: 0 10px; }
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content-galeria { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+.gallery-event-section { margin-bottom: 80px; }
+.gallery-event-section:last-child { margin-bottom: 0; }
+.gallery-event-title {
+  font-size: 2.5rem; font-weight: 800; color: var(--dark-color);
+  margin-bottom: 40px; text-align: center;
+}
+.gallery-event-title::after {
+  content: ''; display: block; width: 70px; height: 4px;
+  background-color: var(--primary-color); margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* --- GRID DE IMÁGENES Y EFECTO HOVER --- */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.gallery-card {
+  position: relative; /* ¡Esencial para el posicionamiento del overlay! */
+  border-radius: var(--border-radius);
+  overflow: hidden; /* ¡Esencial para ocultar el overlay al principio! */
+  aspect-ratio: 4 / 3; /* Mantiene la proporción de las tarjetas */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.gallery-image {
+  width: 100%; height: 100%; object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.gallery-card:hover .gallery-image {
+  transform: scale(1.1); /* Efecto de zoom sutil en la imagen */
+}
+
+/* El Overlay */
+.gallery-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 98, 204, 0.9), rgba(0, 123, 255, 0.7));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transform: translateY(100%); /* Lo esconde abajo */
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.gallery-card:hover .gallery-card-overlay {
+  transform: translateY(0); /* Lo muestra al hacer hover */
+}
+
+/* La Descripción dentro del Overlay */
+.image-description {
+  color: var(--white-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out 0.2s, transform 0.3s ease-in-out 0.2s; /* El 0.2s es un delay */
+}
+.gallery-card:hover .image-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 576px) {
+  .main-content-galeria { padding: 60px 15px; }
+  .gallery-event-title { font-size: 2rem; }
+  .image-grid { gap: 15px; }
+}

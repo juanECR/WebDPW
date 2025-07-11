@@ -7,40 +7,34 @@ import { FaChevronRight, FaEnvelope, FaBook } from 'react-icons/fa';
 // Datos de los docentes para fácil mantenimiento
 const docentesData = [
   {
-    name: "Dra. Elena Torres",
-    subject: "Fundamentos de UX/UI",
+    name: "MORENO MÁRQUEZ, Alfonso Álvaro",
+    subject: "COMUNICACIÓN ORAL  SOLUCION DE PROBLEMAS",
     email: "e.torres@institucionweb.edu",
-    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600"
+    imageUrl: "https://w7.pngwing.com/pngs/400/768/png-transparent-laptop-computer-icons-user-drawing-computer-user-miscellaneous-blue-rectangle-thumbnail.png"
   },
   {
-    name: "Ing. Marco Gutierrez",
-    subject: "Desarrollo Front-End con React",
+    name: "TORRES LOZANO, Juan Carlos",
+    subject: "FUNDAMENTOS DE PROGRAMACIÓN,",
     email: "m.gutierrez@institucionweb.edu",
-    imageUrl: "https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&q=80&w=600"
+    imageUrl: "https://w7.pngwing.com/pngs/400/768/png-transparent-laptop-computer-icons-user-drawing-computer-user-miscellaneous-blue-rectangle-thumbnail.png"
   },
   {
-    name: "M.Sc. Sofía Castillo",
-    subject: "Bases de Datos y Back-End",
+    name: "BANDO GÓMEZ, Kevin Vlaes",
+    subject: "GESTIÓN Y ADMINISTRACIÓN DE SITIOS WEB",
     email: "s.castillo@institucionweb.edu",
-    imageUrl: "https://images.unsplash.com/photo-1542744893-79a0a3a4a150?auto=format&fit=crop&q=80&w=600"
+    imageUrl: "https://w7.pngwing.com/pngs/400/768/png-transparent-laptop-computer-icons-user-drawing-computer-user-miscellaneous-blue-rectangle-thumbnail.png"
   },
   {
-    name: "Lic. Javier Peña",
-    subject: "Diseño de Interfaces y Prototipado",
+    name: "YUCRA CURO, Aníbal",
+    subject: "ADMINISTRACIÓN DE BASE DE DATOS",
     email: "j.pena@institucionweb.edu",
-    imageUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&q=80&w=600"
+    imageUrl: "https://w7.pngwing.com/pngs/400/768/png-transparent-laptop-computer-icons-user-drawing-computer-user-miscellaneous-blue-rectangle-thumbnail.png"
   },
   {
-    name: "Dra. Patricia Ramos",
-    subject: "Metodologías Ágiles (Scrum)",
+    name: "ALEGRIA ÑACCHA CRISTHIAN",
+    subject: "NTRODUCCIÓN DE BASE DE DATOS",
     email: "p.ramos@institucionweb.edu",
-    imageUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    name: "Ing. David Franco",
-    subject: "Despliegue y DevOps",
-    email: "d.franco@institucionweb.edu",
-    imageUrl: "https://images.unsplash.com/photo-1590086782792-42dd2350150d?auto=format&fit=crop&q=80&w=600"
+    imageUrl: "https://w7.pngwing.com/pngs/400/768/png-transparent-laptop-computer-icons-user-drawing-computer-user-miscellaneous-blue-rectangle-thumbnail.png"
   }
 ];
 

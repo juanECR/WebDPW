@@ -21,6 +21,11 @@
   margin-bottom: 1rem;
 }
 
+.footer-brand img{
+  width: 100px;
+  height: 50px;
+}
+
 .footer-info p {
   margin: 0.3rem 0;
 }
@@ -31,7 +36,16 @@
   padding-top: 1rem;
   color: var(--gray-light);
 }
+.footer-Nosotros a{
+  text-decoration: none;
+  color: var(--white);
+  transition: 0.4s;
 
+  &:hover{
+    color: var(--gray);
+  }
+  
+}
 /* Responsive */
 @media (min-width: 600px) {
   .footer-container {

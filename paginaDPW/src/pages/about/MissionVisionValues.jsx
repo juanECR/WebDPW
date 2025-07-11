@@ -1,25 +1,27 @@
 import React from 'react';
 import './MisionVision.css';
 import { FaChevronRight, FaRocket, FaGlobeAmericas, FaShieldAlt } from 'react-icons/fa';
-
+import Img1 from '../../assets/images/img1.jpg';
+import Img2 from '../../assets/images/img2.jpg';
+import Img3 from '../../assets/images/img3.jpg';
 const sectionsData = [
   {
     title: "Nuestra Misión",
     icon: <FaRocket />, // Icono cambiado
-    description: "Formar profesionales líderes en el campo del diseño y la tecnología web, proporcionando una educación innovadora, práctica y profundamente conectada con las necesidades de la industria. Nos comprometemos a empoderar a nuestros estudiantes con las habilidades, el conocimiento y la mentalidad crítica para crear soluciones digitales que impacten positivamente en la sociedad.",
-    imageUrl: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800"
+    description: "Al 2031, somos un IES de excelencia, licenciada, que lidera en la formación integral de profesionales competitivos, innovadores, fomentamos el emprendimiento, la calidad en nuestros productos y servicios, reconocidos a nivel regional y nacional por la formación de profesionales comprometidos con la calidad y cuidado del medio ambiente.",
+    imageUrl: Img1
   },
   {
     title: "Nuestra Visión",
     icon: <FaGlobeAmericas />, // Icono cambiado
-    description: "Ser la institución de referencia a nivel nacional e internacional en la formación de talentos para la economía digital. Aspiramos a ser un ecosistema de innovación donde estudiantes, docentes y empresas colaboren para definir el futuro de la web, impulsando el desarrollo tecnológico y la creatividad sin límites.",
-    imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+    description: "Al 2030, somos un IES que lidera en la formación integral de profesionales competitivos, innovadores, fomentamos el emprendimiento, la calidad en nuestros productos y servicios, con sentido de cuidado del medio ambiente y que aportan al desarrollo económico de la región.",
+    imageUrl: Img2
   },
   {
     title: "Nuestros Valores",
     icon: <FaShieldAlt />, // Icono cambiado
-    description: "Nuestras acciones se guían por un conjunto de principios fundamentales: la Innovación constante, la Excelencia académica, la Integridad en todo lo que hacemos, la Colaboración como motor de crecimiento y la Pasión por enseñar y aprender. Estos valores definen nuestra cultura y nuestro compromiso con la comunidad.",
-    imageUrl: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800"
+    description: "Innovación ,Excelencia ,Compromiso Institucional, Puntualidad",
+    imageUrl: Img3
   }
 ];
 

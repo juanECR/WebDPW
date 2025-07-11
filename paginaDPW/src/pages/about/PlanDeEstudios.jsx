@@ -7,28 +7,35 @@ const planData = [
   {
     semestre: "Primer Semestre",
     cursos: [
-      { unidad: "Introducción al Diseño Digital", horas: 96, creditos: 5, docente: "Dra. Elena Torres" },
-      { unidad: "HTML5 y CSS3 Esencial", horas: 128, creditos: 6, docente: "Ing. Marco Gutierrez" },
-      { unidad: "Lógica de Programación", horas: 96, creditos: 5, docente: "Ing. David Franco" },
-      { unidad: "Comunicación Efectiva", horas: 64, creditos: 3, docente: "Lic. Javier Peña" },
+      { unidad: "Fundamentos de programación", horas: 96, creditos: 4, docente: "ing. Juan Carlos TORRES LOZANO" },
+      { unidad: "Redes e internet", horas: 80, creditos: 3, docente: "Ing. Marco Gutierrez" },
+      { unidad: "Análisis y diseño de sistemas", horas: 96, creditos: 4, docente: "Ing. David Franco" },
+      { unidad: "Introducción de base de datos", horas: 64, creditos: 3, docente: "Lic. Javier Peña" },
+      { unidad: "Arquitectura de computadoras", horas: 48, creditos: 2, docente: "Lic. Javier Peña" },
+       { unidad: "Comunicación oral", horas: 48, creditos: 2, docente: "Lic. Javier Peña" },
+        { unidad: "Aplicaciones en internet", horas: 48, creditos: 2, docente: "Lic. Javier Peña" },
     ]
   },
   {
     semestre: "Segundo Semestre",
     cursos: [
-      { unidad: "Fundamentos de UX/UI", horas: 96, creditos: 5, docente: "Dra. Elena Torres" },
-      { unidad: "JavaScript Moderno (ES6+)", horas: 128, creditos: 6, docente: "Ing. Marco Gutierrez" },
-      { unidad: "Diseño Responsivo y Frameworks CSS", horas: 96, creditos: 5, docente: "M.Sc. Sofía Castillo" },
-      { unidad: "Metodología de la Investigación", horas: 64, creditos: 3, docente: "Lic. Javier Peña" },
+      { unidad: "Ofimática", horas: 48, creditos: 2, docente: "Dra. Elena Torres" },
+      { unidad: "Interpretación y producción textos", horas: 48, creditos: 2, docente: "Ing. Marco Gutierrez" },
+      { unidad: "Metodología de desarrollo de software", horas: 80, creditos: 3, docente: "M.Sc. Sofía Castillo" },
+      { unidad: "Programación orientada a objetos", horas: 96, creditos: 3, docente: "Lic. Javier Peña" },
+       { unidad: "Arquitectura de servidores web", horas: 80, creditos: 3, docente: "Lic. Javier Peña" },
+        { unidad: "Aplicaciones sistematizadas", horas: 48, creditos: 2, docente: "Lic. Javier Peña" },
+         { unidad: "Taller de base de datos", horas: 80, creditos: 3, docente: "Lic. Javier Peña" },
     ]
   },
   {
     semestre: "Tercer Semestre",
     cursos: [
-        { unidad: "Desarrollo con React.js", horas: 128, creditos: 6, docente: "Ing. Marco Gutierrez" },
-        { unidad: "Introducción a Back-End con Node.js", horas: 96, creditos: 5, docente: "M.Sc. Sofía Castillo" },
-        { unidad: "Diseño de Interfaces y Prototipado", horas: 96, creditos: 5, docente: "Dra. Elena Torres" },
-        { unidad: "Control de Versiones (Git)", horas: 64, creditos: 3, docente: "Ing. David Franco" },
+        { unidad: "Administración de base de datos", horas: 128, creditos: 5, docente: "Ing. Marco Gutierrez" },
+        { unidad: "Programación de aplicaciones web", horas: 128, creditos: 5, docente: "M.Sc. Sofía Castillo" },
+        { unidad: "Diseño de interfaces web", horas: 128, creditos: 5, docente: "Dra. Elena Torres" },
+        { unidad: "Pruebas de software", horas: 48, creditos: 2, docente: "Ing. David Franco" },
+        { unidad: "Inglés para la comunicación oral", horas: 48, creditos: 2, docente: "Ing. David Franco" },
     ]
   },
   // ... Agrega aquí los datos para los semestres 4, 5 y 6
@@ -36,28 +43,34 @@ const planData = [
   {
     semestre: "Cuarto Semestre",
     cursos: [
-        { unidad: "React Avanzado y Estado Global", horas: 128, creditos: 6, docente: "Ing. Marco Gutierrez" },
-        { unidad: "Bases de Datos SQL", horas: 96, creditos: 5, docente: "M.Sc. Sofía Castillo" },
-        { unidad: "APIs RESTful", horas: 96, creditos: 5, docente: "Ing. David Franco" },
-        { unidad: "Testing y QA", horas: 64, creditos: 3, docente: "Dra. Patricia Ramos" },
+        { unidad: "Desarrollo de entornos web", horas: 112, creditos: 4, docente: "Ing. Marco Gutierrez" },
+        { unidad: "Programación de soluciones web", horas: 128, creditos: 5, docente: "M.Sc. Sofía Castillo" },
+        { unidad: "Proyectos de software", horas: 64, creditos: 3, docente: "Ing. David Franco" },
+        { unidad: "Seguridad en aplicaciones web", horas: 48, creditos: 2, docente: "Dra. Patricia Ramos" },
+          { unidad: "Comprensión y redacción en inglés	", horas: 48, creditos: 2, docente: "Dra. Patricia Ramos" },
+            { unidad: "Comportamiento ético", horas: 80, creditos: 3, docente: "Dra. Patricia Ramos" },
     ]
   },
   {
     semestre: "Quinto Semestre",
     cursos: [
-        { unidad: "Bases de Datos NoSQL (MongoDB)", horas: 96, creditos: 5, docente: "M.Sc. Sofía Castillo" },
-        { unidad: "Despliegue de Aplicaciones (DevOps)", horas: 128, creditos: 6, docente: "Ing. David Franco" },
-        { unidad: "Seguridad Web", horas: 96, creditos: 5, docente: "Ing. Marco Gutierrez" },
-        { unidad: "Gestión de Proyectos Ágiles", horas: 64, creditos: 3, docente: "Dra. Patricia Ramos" },
+        { unidad: "Programación de aplicaciones móviles", horas: 128, creditos: 5, docente: "M.Sc. Sofía Castillo" },
+        { unidad: "Marketing digital", horas: 64, creditos: 3, docente: "Ing. David Franco" },
+        { unidad: "Diseño de soluciones web", horas: 64, creditos: 3, docente: "Ing. Marco Gutierrez" },
+        { unidad: "Gestión y administración de sitios web", horas: 48, creditos: 2, docente: "Dra. Patricia Ramos" },
+         { unidad: "Diagramación digital", horas: 80, creditos: 3, docente: "Dra. Patricia Ramos" },
+          { unidad: "Solución de problemas", horas: 48, creditos: 2, docente: "Dra. Patricia Ramos" },
+           { unidad: "Oportunidades de negocios", horas: 48, creditos: 2, docente: "Dra. Patricia Ramos" },
     ]
   },
   {
     semestre: "Sexto Semestre",
     cursos: [
-        { unidad: "Proyecto Final Integrador I", horas: 128, creditos: 8, docente: "Comité Académico" },
-        { unidad: "Taller de Empleabilidad", horas: 64, creditos: 4, docente: "Lic. Javier Peña" },
-        { unidad: "Electivo I: Tópicos Avanzados", horas: 96, creditos: 5, docente: "Varios Docentes" },
-        { unidad: "Prácticas Pre-Profesionales", horas: 160, creditos: 8, docente: "Coordinación" },
+        { unidad: "Plataforma de servicios web", horas: 80, creditos: 3, docente: "Comité Académico" },
+        { unidad: "Ilustración y gráfica digital", horas: 128, creditos: 5, docente: "Lic. Javier Peña" },
+        { unidad: "Administración de servidores web", horas: 96, creditos: 2, docente: "Varios Docentes" },
+        { unidad: "Comercio electrónico", horas: 128, creditos: 5, docente: "Coordinación" },
+        { unidad: "Plan de negocios", horas: 48, creditos: 2, docente: "Coordinación" },
     ]
   }
 ];

@@ -53,7 +53,7 @@ const Navbar = () => {
 
             {/* Añadimos el evento onClick a cada span */}
             <li className="has-submenu">
-              <span onClick={handleSubmenuClick}>Sobre Nosotros ▾</span>
+              <span onClick={handleSubmenuClick}>Sobre Nosotros▾</span>
               <ul className="submenu">
                 <li><Link to="/Presentacion">Presentación</Link></li>
                 <li><Link to="/misionVision">Misión, visión y valores</Link></li>
@@ -67,7 +67,7 @@ const Navbar = () => {
             </li>
 
             <li className="has-submenu">
-              <span onClick={handleSubmenuClick}>Admisión y Matrícula ▾</span>
+              <span onClick={handleSubmenuClick}>Admisión y Matrícula▾</span>
               <ul className="submenu">
                 <li><Link to="/admision/Admision">Admisión</Link></li>
                 <li><Link to="/admision/Matricula">Matrícula</Link></li>
@@ -76,7 +76,7 @@ const Navbar = () => {
             </li>
 
             <li className="has-submenu">
-              <span onClick={handleSubmenuClick}>Transparencia ▾</span>
+              <span onClick={handleSubmenuClick}>Transparencia▾</span>
               <ul className="submenu">
                 <li><Link to="/Transparencia/DocumentosGestion">Documentos de gestión</Link></li>
                 <li><Link to="/Transparencia/Estadistica">Estadística</Link></li>
@@ -88,20 +88,20 @@ const Navbar = () => {
             <li><Link to="/contacto">Contáctanos</Link></li>
 
             <li className="has-submenu">
-              <span onClick={handleSubmenuClick}>Servicios ▾</span>
+              <span onClick={handleSubmenuClick}>Servicios▾</span>
               <ul className="submenu">
-                <li><Link to="/servicios/biblioteca">Biblioteca</Link></li>
-                <li><Link to="/servicios/complementarios">Servicios complementarios</Link></li>
-                <li><Link to="/servicios/bolsa">Bolsa Laboral</Link></li>
+                <li><Link to="/Servicios/Biblioteca">Biblioteca</Link></li>
+                <li><Link to="/Servicios/Complementarios">Servicios complementarios</Link></li>
+                <li><Link to="/Servicios/BolsaLaboral">Bolsa Laboral</Link></li>
               </ul>
             </li>
 
             <li className="has-submenu">
-              <span onClick={handleSubmenuClick}>Otras Páginas ▾</span>
+              <span onClick={handleSubmenuClick}>Otras Páginas▾</span>
               <ul className="submenu">
-                <li><Link to="/otras/links">Links Institucionales</Link></li>
-                <li><Link to="/otras/noticias">Noticias y publicaciones</Link></li>
-                <li><Link to="/otras/galeria">Galería</Link></li>
+                <li><Link to="/Otras/Links">Links Institucionales</Link></li>
+                <li><Link to="/Otras/Noticias">Noticias y publicaciones</Link></li>
+                <li><Link to="/otras/Galeria">Galería</Link></li>
               </ul>
             </li>
           </ul>

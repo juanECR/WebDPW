@@ -1,0 +1,152 @@
+.biblioteca-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa; /* Un fondo gris claro para la página */
+}
+
+/* --- ESTILOS REUTILIZADOS (Breadcrumbs) --- */
+.breadcrumb-header { background-color: var(--white-color); padding: 15px 0; border-bottom: 1px solid var(--border-color); }
+.breadcrumb-list { display: flex; align-items: center; list-style: none; margin: 0 auto; padding: 0 20px; max-width: 1200px; font-size: 0.95rem; }
+.breadcrumb-list li a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.breadcrumb-list li a:hover { color: var(--primary-hover); }
+.breadcrumb-list li[aria-current="page"] { color: var(--text-color); font-weight: 500; }
+.separator-icon { width: 16px; height: 16px; color: #aab2bd; margin: 0 10px; }
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content-bib { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+
+/* Sección Descripción */
+.descripcion-section-bib { text-align: center; margin-bottom: 40px; }
+.page-icon-bib { font-size: 3.5rem; color: var(--primary-color); margin-bottom: 20px; }
+.page-title-bib { font-size: 2.8rem; font-weight: 800; color: var(--dark-color); margin-bottom: 20px; }
+.description-bib { font-size: 1.2rem; line-height: 1.7; color: var(--text-color); max-width: 800px; margin: 0 auto; }
+.descripcion-section-bib button a{
+  text-decoration: none;
+  color: white;
+}
+.descripcion-section-bib button{
+  width: 30%;
+  height: 45px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: rgb(34, 103, 253);
+  &:hover{
+    background: rgb(36, 36, 243);
+  }
+}
+/* Sección Buscador */
+.search-section-bib { margin-bottom: 60px; }
+.search-container { max-width: 700px; margin: 0 auto; }
+.search-bar { position: relative; }
+.search-bar .search-icon {
+  position: absolute; top: 50%; left: 20px;
+  transform: translateY(-50%);
+  color: #adb5bd; font-size: 1.2rem;
+}
+.search-bar input {
+  width: 100%;
+  padding: 18px 20px 18px 60px; /* Espacio para el icono */
+  font-size: 1.1rem;
+  border-radius: 50px; /* Bordes redondeados */
+  border: 1px solid var(--border-color);
+  background-color: var(--white-color);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15);
+}
+
+/* Sección de Libros */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.book-card {
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.book-cover img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+}
+.book-info {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.book-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin: 0 0 5px 0;
+  line-height: 1.4;
+}
+.book-author {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin: 0 0 20px 0;
+}
+.book-action-link {
+  margin-top: auto;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.book-action-link:hover {
+  background-color: var(--primary-hover);
+}
+
+.no-results-message {
+  grid-column: 1 / -1; /* Ocupa todo el ancho del grid */
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  padding: 40px;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 576px) {
+  .main-content-bib { padding: 60px 20px; }
+  .page-title-bib { font-size: 2.2rem; }
+  .description-bib { font-size: 1.1rem; }
+  .search-bar input { padding: 15px 20px 15px 50px; font-size: 1rem; }
+  .search-bar .search-icon { left: 18px; }
+}
+
+.status-message {
+  grid-column: 1 / -1; /* Ocupa todo el ancho del grid */
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  padding: 40px;
+  font-weight: 500;
+}
+
+.error-message {
+  color: #dc3545; /* Un color rojo para errores */
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: var(--border-radius);
+}

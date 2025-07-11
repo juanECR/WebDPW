@@ -1,0 +1,98 @@
+/* src/components/BolsaLaboral/BolsaLaboral.css */
+/* ASUME QUE LAS VARIABLES :root ESTÁN EN UN CSS GLOBAL (index.css o App.css) */
+
+.bolsa-laboral-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-gray-color);
+  min-height: 100vh;
+}
+
+/* --- ESTILOS REUTILIZADOS (Breadcrumbs) --- */
+.breadcrumb-header { background-color: var(--white-color); padding: 15px 0; border-bottom: 1px solid var(--border-color); }
+.breadcrumb-list { display: flex; align-items: center; list-style: none; margin: 0 auto; padding: 0 20px; max-width: 1200px; font-size: 0.95rem; }
+.breadcrumb-list li a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.breadcrumb-list li a:hover { color: var(--primary-hover); }
+.breadcrumb-list li[aria-current="page"] { color: var(--text-color); font-weight: 500; }
+.separator-icon { width: 16px; height: 16px; color: #aab2bd; margin: 0 10px; }
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content-bl { max-width: 900px; margin: 0 auto; padding: 80px 20px; }
+.descripcion-section-bl { text-align: center; margin-bottom: 60px; }
+.page-icon-bl { font-size: 3.5rem; color: var(--primary-color); margin-bottom: 20px; }
+.page-title-bl { font-size: 2.8rem; font-weight: 800; color: var(--dark-color); margin-bottom: 20px; }
+.description-bl { font-size: 1.2rem; line-height: 1.7; color: var(--text-color); max-width: 700px; margin: 0 auto; }
+
+/* --- SECCIÓN DE PUESTOS DE TRABAJO --- */
+.jobs-title-bl {
+  font-size: 2rem; color: var(--dark-color); margin-bottom: 30px;
+  padding-bottom: 10px; border-bottom: 1px solid var(--border-color);
+}
+.job-list {
+  display: flex; flex-direction: column; gap: 20px;
+}
+.job-card {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  border-left: 5px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+.job-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+.job-title {
+  font-size: 1.3rem; font-weight: 600; color: var(--dark-color); margin: 0;
+}
+.job-company {
+  font-size: 1rem; color: var(--text-color); margin: 5px 0 0 0;
+}
+.job-card-details {
+  display: flex; align-items: center; gap: 25px;
+  color: var(--text-color);
+}
+.job-detail {
+  display: flex; align-items: center; gap: 8px; font-size: 0.95rem;
+}
+.job-apply-link {
+  padding: 12px 25px; background: var(--primary-color);
+  color: var(--white-color); text-decoration: none;
+  font-weight: 600; border-radius: 50px;
+  white-space: nowrap; /* Evita que el texto del botón se rompa */
+  transition: background-color 0.3s ease;
+}
+.job-apply-link:hover {
+  background: var(--primary-hover);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  .job-card {
+    grid-template-columns: 1fr; /* Apila los elementos */
+    gap: 15px;
+  }
+  .job-card-header, .job-card-details, .job-card-action {
+    text-align: center;
+  }
+  .job-card-details {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .job-apply-link {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-content-bl { padding: 60px 20px; }
+  .page-title-bl { font-size: 2.2rem; }
+  .description-bl { font-size: 1.1rem; }
+}

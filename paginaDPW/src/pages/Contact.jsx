@@ -38,15 +38,17 @@ const Contacto = () => {
             <ul className="info-list">
               <li>
                 <FaMapMarkerAlt className="info-icon" />
-                <span>123 Av. Conocimiento, Ciudad Universitaria, CP 12345</span>
+                <span>
+Jr. Córdova N° 650
+</span>
               </li>
               <li>
                 <FaPhoneAlt className="info-icon" />
-                <span>+1 (234) 567-8901</span>
+                <span>(066) 322296</span>
               </li>
               <li>
                 <FaEnvelope className="info-icon" />
-                <span>contacto@institucionweb.edu</span>
+                <span>contactos@iestphuanta.edu.pe</span>
               </li>
             </ul>
 
@@ -58,10 +60,9 @@ const Contacto = () => {
             <div className="social-links">
               <h4>Síguenos en:</h4>
               <div className="social-icons-wrapper">
-                  <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-                  <a href="#" aria-label="Twitter"><FaTwitter /></a>
+                  <a href="https://www.facebook.com/profile.php?id=61557665334329#" aria-label="Facebook"><FaFacebookF /></a>
                   <a href="#" aria-label="Instagram"><FaInstagram /></a>
-                  <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
+
               </div>
             </div>
           </div>

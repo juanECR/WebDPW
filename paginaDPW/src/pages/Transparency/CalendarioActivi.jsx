@@ -7,32 +7,25 @@ import { FaChevronRight, FaPalette, FaCode, FaFutbol, FaBook, FaCalendarCheck } 
 // --- DATOS PARA EL COMPONENTE ---
 const extracurricularesData = [
   {
-    date: "15 ABR",
-    category: "Cultural",
-    title: "Inauguración de la Semana de Arte y Diseño",
+    date: "12 abril",
+    category: "admision",
+    title: "Examen de admision",
     description: "Exposiciones, talleres y conferencias para celebrar la creatividad de nuestra comunidad.",
     icon: <FaPalette />
   },
   {
-    date: "25 ABR",
-    category: "Académico",
-    title: "Hackathon de Desarrollo Web 2024",
+    date: "13 abril",
+    category: "Recepcion de cachimbos",
+    title: "Recibimiento de cachimbos",
     description: "24 horas de programación intensiva para resolver desafíos del mundo real. ¡Premios para los mejores equipos!",
     icon: <FaCode />
   },
   {
-    date: "10 MAY",
-    category: "Deportivo",
-    title: "Campeonato Inter-Ciclos de Fútbol",
+    date: "05 junio",
+    category: "Aniversario",
+    title: "Aniversario de la IESTP Huanta",
     description: "Demuestra tus habilidades en la cancha y compite por la copa institucional.",
     icon: <FaFutbol />
-  },
-  {
-    date: "22 MAY",
-    category: "Cultural",
-    title: "Feria del Libro y Club de Lectura",
-    description: "Intercambio de libros y discusión sobre las obras más influyentes de la literatura tecnológica.",
-    icon: <FaBook />
   }
 ];
 

@@ -8,38 +8,38 @@ import { FaChevronRight, FaPaintBrush, FaCode, FaLayerGroup, FaDesktop, FaServer
 const modulosData = [
   {
     icon: <FaLayerGroup />,
-    title: "Módulo I: Fundamentos del Diseño y Desarrollo",
-    description: "Establece las bases teóricas y prácticas esenciales para la creación de productos digitales, desde la conceptualización hasta la maquetación inicial.",
+    title: "Módulo I: ANALISIS Y DISEÑO DE SISTEMAS WEB",
+    description: "Desarrollar la construcción de programas de los sistemas de información, de acuerdo al diseño funcional, estándares internacionales de TI, buenas prácticas de programación y políticas de seguridad de la organización.",
     topics: [
       "Teoría del color y tipografía",
       "Principios de UI/UX",
       "HTML5 Semántico y CSS3 Moderno",
-      "Introducción a JavaScript",
-      "Control de versiones con Git"
+      "Introducción a Sql",
+      "Porgramacion Orientada a Objetos"
     ]
   },
   {
     icon: <FaDesktop />,
-    title: "Módulo II: Desarrollo Front-End Interactivo",
-    description: "Enfocado en la construcción de interfaces de usuario dinámicas y responsivas, utilizando las librerías y frameworks más demandados del mercado.",
+    title: "Módulo II: DESARROLLO DE APLICACIONES WEB",
+    description: "Desarrollar la construcción de programas de los sistemas de información, de acuerdo al diseño funcional, estándares internacionales de TI, buenas prácticas de programación y políticas de seguridad de la organización",
     topics: [
-      "JavaScript Avanzado (ES6+)",
-      "Desarrollo con React.js",
-      "Gestión de estado (Context, Redux)",
-      "APIs y Asincronía",
+      "Administracion de base de datos",
+      "Diseño de interfaces Web",
+      "Pruebas de software",
+      "Seguridad en Aplicaciones Web",
       "Optimización y Rendimiento Web"
     ]
   },
   {
     icon: <FaServer />,
-    title: "Módulo III: Desarrollo Back-End y Despliegue",
-    description: "Cubre la lógica del lado del servidor, la gestión de bases de datos y el proceso para llevar una aplicación a producción de forma profesional.",
+    title: "Módulo III:DISEÑO DE SERVICIOS WEB",
+    description: "Diseñar la presentación, animación, organización y navegación de los contenidos y servicios web, de acuerdo a las demandas del negocio, buenas prácticas de diseño, técnicas de diseño web, usabilidad y experiencia del usuario objetivo.",
     topics: [
-      "Node.js y Express",
-      "Bases de datos (SQL y NoSQL)",
-      "Creación de APIs RESTful",
-      "Autenticación y Seguridad",
-      "Despliegue en la nube (Cloud)"
+      "Marketing Digital",
+      "Programación de aplicaciones Web",
+      "Diagramación Digital",
+      "Plataforma de Servicios Web",
+      "Ilustración y Grafica Digital"
     ]
   }
 ];
@@ -71,7 +71,9 @@ const Presentacion = () => {
             <h1 className="carrera-titulo">Diseño y Programación Web</h1>
             <p className="carrera-subtitulo">Una carrera para creadores digitales del futuro.</p>
             <p className="carrera-descripcion">
-              Nuestro programa de Diseño y Programación Web está diseñado para formarte como un profesional integral, capaz de conceptualizar, diseñar, desarrollar y desplegar aplicaciones web modernas y funcionales. Combinamos una sólida base en principios de diseño de experiencia de usuario (UX/UI) con un profundo dominio de las tecnologías de desarrollo front-end y back-end más relevantes en la industria actual.
+              El Programa de Estudios de Diseño y Programación Web en el Instituto de Educación Superior Tecnológico Huanta está orientado a formar profesionales con competencias sólidas en el desarrollo y diseño de sitios web. Este programa combina creatividad y 
+              tecnología, permitiendo a los estudiantes aprender desde los fundamentos del diseño gráfico hasta las técnicas avanzadas de programación web. A lo largo de su formación, los estudiantes 
+              adquirirán habilidades en HTML, CSS, JavaScript y otros lenguajes de programación, así como en el uso de herramientas de diseño y frameworks modernos. Nuestro enfoque práctico incluye proyectos reales y prácticas en empresas, preparando a los egresados para enfrentar los desafíos del mundo digital y destacarse en el competitivo mercado laboral 
             </p>
             <button className="cta-button-presentacion">Descargar Folleto del Programa</button>
           </div>

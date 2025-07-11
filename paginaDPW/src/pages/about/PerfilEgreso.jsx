@@ -10,34 +10,32 @@ const accordionData = [
     title: "Competencias Específicas",
     icon: <FaLaptopCode />,
     content: [
-      "Diseña y desarrolla interfaces de usuario (UI) atractivas, funcionales y responsivas.",
-      "Aplica principios de Experiencia de Usuario (UX) para crear productos digitales intuitivos.",
-      "Construye aplicaciones web robustas utilizando frameworks modernos como React.",
-      "Desarrolla APIs RESTful y gestiona la lógica del lado del servidor (Back-End).",
-      "Administra y consulta bases de datos SQL y NoSQL de manera eficiente.",
-      "Implementa y despliega aplicaciones en servicios de la nube (Cloud)."
+      "Desarrollar la construcción de programas de los sistemas de información, de acuerdo al diseño funcional, estándares internacionales de TI, buenas prácticas de programación y políticas de seguridad de la organización.",
+      "Desarrollar las pruebas integrales de los sistemas de información y servicios de TI en la fase de implantación, de acuerdo al diseño funcional, buenas prácticas de TI y políticas de seguridad de la organización.",
+      "Diseñar la presentación, animación, organización y navegación de los contenidos y servicios web, de acuerdo a las demandas del negocio, buenas prácticas de diseño, técnicas de diseño web, usabilidad y experiencia del usuario objetivo."
     ]
   },
   {
     title: "Competencias para la Empleabilidad",
     icon: <FaBriefcase />,
     content: [
-      "Trabaja eficazmente en equipos multidisciplinarios bajo metodologías ágiles (Scrum, Kanban).",
-      "Comunica ideas técnicas de forma clara y efectiva a audiencias diversas.",
-      "Resuelve problemas complejos de manera analítica y creativa.",
-      "Gestiona su tiempo y proyectos de forma autónoma y responsable.",
-      "Demuestra un compromiso con el aprendizaje continuo y la adaptación tecnológica."
+      "Comunicación efectiva(UD/T).-  Expresar de manera clara conceptos, ideas, sentimientos, hechos y opiniones en forma oral y escrita para comunicarse e interactuar con otras personas en contextos sociales y laborales diversos.",
+      "Inglés(UD/T).-  Comprender y comunicar ideas, cotidianamente, a nivel oral y escrito, así como interactuar en diversas situaciones en idioma inglés, en contextos sociales y laborales.",
+      "Tecnologías de la Información(UD/T).-  Manejar herramientas informáticas de las TIC para buscar y analizar información, comunicar y realizar procedimientos o tareas vinculadas al área profesional, de acuerdo con los requerimientos de su entorno laboral.",
+      "Ética(UD/T).-  Establecer relaciones con respecto y justicia en los ámbitos personal, colectivo e institucional, contribuyendo a una convivencia democrática, orientada al bien común que considere la diversidad y dignidad de las personas, teniendo en cuenta las consideraciones aplicadas en su contexto laboral.",
+      "Solución de Problemas(UD/T).-  Identificar situaciones complejas para evaluar posibles soluciones, aplicando un conjunto de herramientas flexibles que conlleven a la atención de una necesidad.",
+       "Emprendimiento(UD/T).-  Identificar nuevas oportunidades de proyectos o negocios que generen valor y sean sostenibles, gestionando recursos para su funcionamiento con creatividad y ética, articulando acciones que permitan desarrollar innovaciones en la creación de bienes y/o servicios, así como en procesos o productos ya existentes.",
+       "Trabajo colaborativo(UD/T).-  Participar de forma activa en el logro de objetivos y metas comunes, integrándose con otras personas con criterio de respeto y justicia, sin estereotipos de género u otros, en un contexto determinado.",
+        "Liderazgo personal y profesional(UD/T).-  Articular recursos y potencialidades de cada integrante de su equipo logrando un trabajo comprometido, colaborativo, creativo, ético, sensible a su contexto social y ambiente, en pro del bien común."
     ]
   },
   {
     title: "Ámbito de Desempeño",
     icon: <FaBuilding />,
     content: [
-      "Desarrollador Front-End en agencias de software, startups y grandes corporaciones.",
-      "Desarrollador Back-End, construyendo la lógica y servicios que potencian las aplicaciones.",
-      "Desarrollador Full-Stack, con capacidad para trabajar en todas las capas de una aplicación web.",
-      "Diseñador UX/UI, investigando y creando las mejores experiencias para los usuarios.",
-      "Consultor tecnológico o emprendedor, creando sus propias soluciones digitales."
+      "Municipalidades: Área de estadística e informática, Área de imagen de institucional. UGEL: Área de informática, Área de imagen de institucional.",
+      "Red de salud: Área de estadística e informática, Área de imagen de institucional.",
+      "Campos: Análisis funcional, Diseño de plataformas web, Implementación y mantenimiento de plataformas web, Programación de aplicaciones web, Programación de base de datos, Programación de servicios, Programación de aplicaciones móviles, Diseño gráfico publicitario, Producción audiovisual y multimedia, Marketing digital, Seguridad web, Ilustración digital."
     ]
   }
 ];
@@ -71,7 +69,8 @@ const PerfilEgreso = () => {
         <section className="descripcion-section-pe">
           <h1 className="page-title-pe">Perfil del Egresado</h1>
           <p className="description-pe">
-            Al concluir el programa de Diseño y Programación Web, serás un profesional versátil y altamente capacitado, listo para enfrentar los desafíos de la industria tecnológica. Nuestro perfil se enfoca en crear solucionadores de problemas creativos, con una sólida base técnica y habilidades blandas esenciales.
+            El Profesional Técnico de Diseño y Programación Web , cuenta con habilidades para diseñar y desarrollar proyectos Web en medios digitales y multimedia. Propone soluciones creativas e innovadoras que responden a las necesidades y requerimientos del cliente ya las exigencias del mercado laboral, así como coordinar la implementación de proyectos web y posicionamiento SEO, aplicando estándares de seguridad. También, se desempeña con responsabilidad, eficiencia y valores orientados hacia la mejora continua.
+Destaca por contar con habilidades para la innovación y generar buenas prácticas en la empresa orientadas al trabajo colaborativo, efectivo y ético. Se comunica de manera efectiva en español y en inglés en contextos sociales y empresariales. Además, utiliza herramientas informáticas que le permiten optimizar procesos de trabajo en forma individual y colaborativa, y la toma de decisiones; poniendo en evidencia actitudes para la resolución de problemas.
           </p>
         </section>
 

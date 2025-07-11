@@ -6,8 +6,8 @@ import { FaChevronRight, FaFileContract, FaBookOpen, FaSitemap, FaDownload, FaRe
 const documentosGestionData = [
   {
     icon: <FaFileContract />,
-    title: "Plan Estratégico Institucional (PEI)",
-    description: "Define nuestra visión, misión y los objetivos estratégicos que guiarán a la institución en los próximos cinco años."
+    title: "Licenciamiento",
+    description: "Documento de licenciamiento institucional"
   },
   {
     icon: <FaBookOpen />,

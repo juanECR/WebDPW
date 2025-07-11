@@ -80,7 +80,9 @@ const BecasCredito = () => {
         <section className="descripcion-section-bc">
           <h1 className="page-title-bc">Oportunidades de Apoyo Financiero</h1>
           <p className="description-bc">
-            Creemos que el talento no debe tener barreras económicas. Por ello, ofrecemos un sólido programa de becas y opciones de crédito educativo para ayudarte a alcanzar tus metas profesionales.
+            En reconocimiento al esfuerzo, dedicación y sobresaliente desempeño académico, tenemos el placer de anunciar una iniciativa especial dirigida a nuestros estudiantes más destacados. Para aquellos que han alcanzado el primer puesto en los semestres II,  IV y VI, durante el periodo lectivo 2024-II, se otorga becas del 50% de descuento en la matrícula para el próximo periodo académico.
+
+Esta beca es una muestra de nuestro compromiso con la excelencia educativa y nuestro deseo de apoyar a los estudiantes que, con su esfuerzo y dedicación, se han distinguido académicamente. Queremos que este reconocimiento sirva como un impulso para continuar persiguiendo sus metas con el mismo ímpetu y dedicación.
           </p>
         </section>
 
