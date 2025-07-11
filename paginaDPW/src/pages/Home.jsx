@@ -61,18 +61,18 @@ const Home = () => {
         <section className="home-section">
           <h2 className="section-title">Acceso Directo a Información Académica</h2>
           <div className="card-container">
-            <a href="./admision/Matricula" className="info-card">
+            <Link to="/admision/Matricula" className="info-card">
               <FaCalendarAlt className="card-icon" />
               <h3>CRONOGRAMA</h3>
-            </a>
-            <a href="./Transparencia/DocumentosGestion" className="info-card">
+            </Link>
+            <Link href="/Transparencia/DocumentosGestion" className="info-card">
               <FaWpforms className="card-icon" />
               <h3>TRÁMITES</h3>
-            </a>
-            <a href="./Servicios/Complementarios" className="info-card">
+            </Link>
+            <Link to="/Servicios/Complementarios" className="info-card">
               <FaConciergeBell className="card-icon" />
               <h3>SERVICIOS</h3>
-            </a>
+            </Link>
           </div>
         </section>
 
